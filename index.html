@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AURA Design System</title>
+<meta name="description" content="AURA: the Tron design system shared by AURA.p, Glowcast and Streamer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap">
+<link rel="stylesheet" href="dist/aura.css">
+<link rel="stylesheet" href="site/showcase.css">
+<script src="dist/aura.tokens.js"></script>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#top" aria-label="AURA home"><span class="brand-mark">AURA</span><span class="brand-sub">Design System</span></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#principles">Principles</a><a href="#color">Color</a><a href="#type">Type</a><a href="#space">Space</a><a href="#shape">Shape &amp; glow</a><a href="#motion">Motion</a><a href="#components">Components</a><a href="#apps">Apps</a>
+  </nav>
+  <div class="theme" role="group" aria-label="Theme">
+    <button class="tbtn" data-theme="tron-dark" aria-pressed="true">Tron Dark</button>
+    <button class="tbtn" data-theme="tron-light" aria-pressed="false">Tron Light</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <p class="kicker">Version <span data-version></span> · AURA.p · Glowcast · Streamer</p>
+    <h1 class="marquee notched">AURA</h1>
+    <p class="lede">The Arcade Terminal. A 1982 mainframe interface built for 2026: cyan glow on a near-black void, square corners, upper-case readouts. One set of tokens for every screen, from a phone to a television.</p>
+    <div class="hero-sweep" aria-hidden="true">
+      <div class="hs-row"><i style="--w:3">GUIDE</i><i style="--w:5">ON NOW</i><i style="--w:2">LIVE</i></div>
+      <div class="hs-row"><i style="--w:2">08:30</i><i style="--w:4">THE MALTESE FALCON</i><i style="--w:3">LIBRARY</i></div>
+      <span class="hs-line"></span>
+    </div>
+  </section>
+
+  <section id="principles" class="sec">
+    <h2 class="h">Principles</h2>
+    <div class="cards7">
+      <article class="pr"><b>01</b><h3>Cyan means you can act</h3><p>Focus, selection and pressable things only. Never decoration, never plain text.</p></article>
+      <article class="pr"><b>02</b><h3>Glow, not shadow</h3><p>Depth is a glow on the one focused thing and panels a shade above the void.</p></article>
+      <article class="pr"><b>03</b><h3>Square and flat</h3><p>Every corner is zero. No gradients on controls, no blur, no glass.</p></article>
+      <article class="pr"><b>04</b><h3>The void is quiet</h3><p>Panels separate without stacking. Hierarchy comes from type and light.</p></article>
+      <article class="pr"><b>05</b><h3>One canvas for TVs</h3><p>1920 × 1080, scaled to the screen. One design reads the same on every TV.</p></article>
+      <article class="pr"><b>06</b><h3>Focus is the main state</h3><p>The focused item fills cyan, glows and grows a little. Everything else waits.</p></article>
+      <article class="pr"><b>07</b><h3>Functional retro</h3><p>Grids, notches, readouts and the now line are working parts, never costume.</p></article>
+    </div>
+  </section>
+
+  <section id="color" class="sec">
+    <h2 class="h">Color</h2>
+    <p class="intro">OKLCH, so lightness steps are even. Every role exists in both themes; switch the theme above and every swatch on this page follows. Click a swatch to copy its CSS variable.</p>
+    <div id="swatches"></div>
+    <h3 class="h3">Contrast</h3>
+    <p class="intro">Every text role passes 4.5:1 on its surface. The build fails if one doesn't.</p>
+    <div class="tablewrap"><table class="ctable" id="contrast"></table></div>
+  </section>
+
+  <section id="type" class="sec">
+    <h2 class="h">Type</h2>
+    <div class="faces">
+      <div class="face"><span class="face-name">Rajdhani</span><span class="face-big">Aa</span><p>Everything that reads: titles, labels, buttons, running text. Weights 300 to 700.</p><code>var(--font-display)</code></div>
+      <div class="face mono"><span class="face-name">Share Tech Mono</span><span class="face-big">08:30</span><p>Times, numbers, counts and technical details: 2160P · HDR10 · 5.1 · 14.2 GB.</p><code>var(--font-mono)</code></div>
+    </div>
+    <h3 class="h3">Phone roles <span class="dim">(AURA.p)</span></h3>
+    <div id="roles" class="roles"></div>
+    <h3 class="h3">TV scale <span class="dim">(canvas px, shown at half size)</span></h3>
+    <div id="tvscale" class="tvscale"></div>
+  </section>
+
+  <section id="space" class="sec">
+    <h2 class="h">Space</h2>
+    <p class="intro">Sixteen steps in TV-canvas pixels; AURA.p's xs / sm / md / lg are s2 / s4 / s8 / s10. Five named gaps set the rhythm between things.</p>
+    <div class="spacegrid"><div id="steps" class="steps"></div><div id="gaps" class="steps"></div></div>
+  </section>
+
+  <section id="shape" class="sec">
+    <h2 class="h">Shape &amp; glow</h2>
+    <div class="shape">
+      <figure class="fig"><div class="art notched pulse"><div class="art-in"></div></div><figcaption><b>Framed art</b> Square, notched corners, breathing between <code>glow-art</code> and <code>glow-art-pulse</code> every 4s.</figcaption></figure>
+      <div class="ladder">
+        <div class="rung" style="box-shadow:var(--glow-dim)"><b>glow-dim</b><span>menus, dialogs, tooltips</span></div>
+        <div class="rung" style="box-shadow:var(--glow)"><b>glow</b><span>the focused item</span></div>
+        <div class="rung" style="box-shadow:var(--glow-hover)"><b>glow-hover</b><span>pointer hover on a primary control</span></div>
+        <div class="rung danger" style="box-shadow:var(--glow-danger)"><b>glow-danger</b><span>error banner</span></div>
+      </div>
+    </div>
+    <div class="rules">
+      <p><b>radius 0</b> Every corner. The only exception is third-party logo artwork, which keeps its own rounding.</p>
+      <p><b>no shadows</b> Elevation is never a drop shadow. Text over pictures may take a soft dark text-shadow.</p>
+      <p><b>notch 10 × 2</b> L-shaped corner marks in focus cyan on framed hero art.</p>
+    </div>
+  </section>
+
+  <section id="motion" class="sec">
+    <h2 class="h">Motion</h2>
+    <p class="intro">Short and plain. Hover or focus a tile to replay it. With reduced motion on, nothing grows, slides or pulses.</p>
+    <div id="motiongrid" class="motiongrid"></div>
+    <div class="loaders">
+      <figure class="loader"><canvas class="cube" width="40" height="40" aria-hidden="true"></canvas><span class="loading-text">Loading stations</span><figcaption><b>Cube spinner</b> AURA.p. A wireframe cube tumbling in perspective; near edges bright and glowing, far edges faint.</figcaption></figure>
+      <figure class="loader"><span class="load-word">Searching for releases…</span><span class="load-line"></span><figcaption><b>Loading line</b> Streamer. A lit piece glides along the progress line under the word; hidden for the first 200ms.</figcaption></figure>
+      <figure class="loader"><div class="tune" aria-hidden="true"><div class="tune-row"><i style="--w:3;--d:0s">Tuning</i><i style="--w:2;--d:1.2s"></i><i style="--w:2;--d:1.85s"></i></div><div class="tune-row"><i style="--w:2;--d:0s">1941</i><i style="--w:4;--d:.75s">Maltese Falcon</i><i style="--w:1;--d:2.1s"></i></div><div class="tune-row"><i style="--w:4;--d:0s">Noir</i><i style="--w:3;--d:1.45s">7</i></div><span class="tune-sweep"></span></div><figcaption><b>Tuning bars</b> Glowcast. The app icon come to life: the orange now line sweeps the listings and each lights as it passes.</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="components" class="sec">
+    <h2 class="h">Components</h2>
+    <p class="intro">Built only from tokens. Hover, tab or use the arrow keys: focus moves the way it does on a TV remote.</p>
+
+    <div class="tv" aria-label="A TV screen, scaled">
+      <div class="tv-in">
+        <div class="tabs" role="tablist"><span class="tab f">Guide</span><span class="tab on f">On Now</span><span class="tab f">Library</span><span class="tab f">Settings</span></div>
+        <div class="guide">
+          <div class="g-head"><span class="label cyan">Channel 7 · Noir</span><span class="mono dim">8:42 PM</span></div>
+          <div class="g-title">The Maltese Falcon</div>
+          <div class="g-meta mono">1941 · 1h 40m · Drama, Mystery</div>
+          <div class="g-rows">
+            <div class="g-row"><span class="ch"><b>7</b><span class="logo" style="--c:oklch(78% 0.15 85)">NOIR</span></span><div class="track"><span class="cell past" style="flex:2"><span class="t">Double Indemnity</span><span class="s">7:00 – 8:40</span></span><span class="cell now f focus" style="flex:3"><span class="t">The Maltese Falcon</span><span class="s">8:40 – 10:20</span></span><span class="cell f" style="flex:2"><span class="t">Laura</span><span class="s">10:20</span></span></div></div>
+            <div class="g-row"><span class="ch"><b>8</b><span class="logo" style="--c:oklch(75% 0.16 300)">SCI</span></span><div class="track"><span class="cell f" style="flex:3"><span class="t">Alien</span><span class="s">8:00 – 10:00</span></span><span class="cell f" style="flex:4"><span class="t">Blade Runner</span><span class="s">10:00 – 12:00</span></span></div></div>
+            <span class="nowline"><b>8:42</b></span>
+          </div>
+        </div>
+        <div class="row-h">Continue watching</div>
+        <div class="posters">
+          <div class="poster f" style="--h:198"><div class="pp"><span>Tron</span></div><div class="pt">Tron</div><div class="ps">1982</div></div>
+          <div class="poster f" style="--h:54"><div class="pp"><span>Dune</span></div><div class="pt">Dune</div><div class="ps">2021</div></div>
+          <div class="poster f" style="--h:330"><div class="pp"><span>Arrival</span></div><div class="pt">Arrival</div><div class="ps">2016</div></div>
+          <div class="poster f" style="--h:165"><div class="pp"><span>Alien</span></div><div class="pt">Alien</div><div class="ps">1979</div></div>
+          <div class="poster f" style="--h:250"><div class="pp"><span>Heat</span></div><div class="pt">Heat</div><div class="ps">1995</div></div>
+        </div>
+        <div class="tv-acts"><span class="btn f">Watch live</span><span class="btn f">Info</span><span class="btn danger f">Remove</span><span class="chip">Back</span><span class="hint"><kbd>Enter</kbd>Watch live</span></div>
+      </div>
+    </div>
+
+    <div class="comp">
+      <div class="cbox"><h3 class="h4">Buttons</h3><div class="row"><button class="dbtn primary">Play</button><button class="dbtn">Cancel</button><button class="dbtn danger">Remove</button></div></div>
+      <div class="cbox"><h3 class="h4">Chips &amp; badges</h3><div class="row"><span class="chip primary">Watch live</span><span class="chip">Info</span></div><div class="row"><span class="bdg" style="color:var(--warn)">Last day</span><span class="bdg" style="color:var(--focus)">2160p</span><span class="bdg" style="color:var(--ok)">Cached</span><span class="bdg" style="color:var(--soft)">Thru 12/1</span></div></div>
+      <div class="cbox"><h3 class="h4">Progress</h3><div class="pbar"><i class="buf" style="width:72%"></i><i class="play" style="width:41%"></i></div><div class="row mono dim between"><span>41:12</span><span>1:40:00</span></div></div>
+      <div class="cbox"><h3 class="h4">Input &amp; dropdown</h3><label class="field"><span class="sr">Search</span><input class="input" placeholder="Search stations"></label><select class="select" aria-label="Sort"><option>Recently played</option><option>A to Z</option></select></div>
+      <div class="cbox wide"><h3 class="h4">Message banners</h3><div class="banner b-err">Playback failed · retrying</div><div class="banner b-ok">Station added to My Collection</div><div class="banner b-info">Offline · reconnecting</div></div>
+      <div class="cbox wide"><h3 class="h4">Dialog</h3><div class="dialog-wrap"><div class="dialog" role="dialog" aria-labelledby="dlg-t"><h4 id="dlg-t" class="dlg-t">Remove station</h4><p>Remove <b>Noir Classics Radio</b> from My Collection? You can add it again from Search.</p><div class="dlg-acts"><button class="dbtn">Cancel</button><button class="dbtn primary">Remove</button></div></div></div></div>
+    </div>
+  </section>
+
+  <section id="apps" class="sec">
+    <h2 class="h">Apps</h2>
+    <div class="apps">
+      <article class="app"><span class="label cyan">AURA.p</span><h3>Pandora client</h3><dl><dt>Platforms</dt><dd>iPhone · iPad, native Swift</dd><dt>Themes</dt><dd>Tron Dark · Tron Light</dd><dt>Loads</dt><dd class="mono">dist/aura.flat.json → DesignTokens+Themes.swift</dd></dl></article>
+      <article class="app"><span class="label cyan">Glowcast</span><h3>Live TV channels</h3><dl><dt>Platforms</dt><dd>Web · Google TV · Apple TV</dd><dt>Themes</dt><dd>Tron Dark</dd><dt>Loads</dt><dd class="mono">dist/design-tokens.json</dd></dl></article>
+      <article class="app"><span class="label cyan">Streamer</span><h3>On-demand player</h3><dl><dt>Platforms</dt><dd>Web · Google TV · Apple TV</dd><dt>Themes</dt><dd>Tron Dark</dd><dt>Loads</dt><dd class="mono">dist/design-tokens.json</dd></dl></article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Source: <code>tokens/aura.tokens.json</code></span><span>Rules: <code>DESIGN.md</code></span><span>Agents: <code>AGENTS.md</code></span><span>Rebuild: <code>node build/build.mjs</code></span>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="site/showcase.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+{
+  "version": "2026-11-25.1",
+  "note": "AURA Tron Dark for TV apps, generated from the AURA design system (aura-design-system/tokens/aura.tokens.json 2026-11-25.1). Don't edit here; change AURA and rebuild. Type and space are in TV-canvas pixels: 1920 x 1080, so 1 is 1/1080 of the screen's height.",
+  "color": {
+    "ink": {
+      "value": "oklch(6% 0.015 230)",
+      "use": "text on a focus, live or danger fill"
+    },
+    "guide": {
+      "value": "oklch(6% 0.015 230)",
+      "use": "the void: every screen's background"
+    },
+    "panel": {
+      "value": "oklch(12% 0.022 225)",
+      "use": "menus, tiles, dialogs, cards"
+    },
+    "row": {
+      "value": "oklch(13% 0.025 222)",
+      "use": "list and channel rows"
+    },
+    "cell": {
+      "value": "oklch(17% 0.03 220)",
+      "use": "listings, poster placeholders"
+    },
+    "cellNow": {
+      "value": "oklch(23% 0.05 212)",
+      "use": "listings on now, a focused list row"
+    },
+    "line": {
+      "value": "oklch(75% 0.18 198 / 22%)",
+      "use": "panel edges and dividers"
+    },
+    "lineStrong": {
+      "value": "oklch(75% 0.18 198 / 45%)",
+      "use": "stronger dividers, input borders"
+    },
+    "text": {
+      "value": "oklch(90% 0.03 210)",
+      "use": "main text"
+    },
+    "soft": {
+      "value": "oklch(80% 0.035 210)",
+      "use": "body text on the void"
+    },
+    "muted": {
+      "value": "oklch(66% 0.04 210)",
+      "use": "readouts, secondary labels"
+    },
+    "mutedOnCell": {
+      "value": "oklch(72% 0.04 210)",
+      "use": "secondary text on listings"
+    },
+    "focus": {
+      "value": "oklch(75% 0.18 198)",
+      "use": "focus, selection, things you can press. Never decoration"
+    },
+    "live": {
+      "value": "oklch(72% 0.19 54)",
+      "use": "the now line, live marks, an active thumbs-up, Tron Light's second accent"
+    },
+    "ok": {
+      "value": "oklch(80% 0.16 165)",
+      "use": "success, healthy"
+    },
+    "warn": {
+      "value": "oklch(86% 0.15 95)",
+      "use": "last day, warnings"
+    },
+    "danger": {
+      "value": "oklch(60% 0.22 330)",
+      "use": "errors and an active thumbs-down only (Arcade Magenta)"
+    }
+  },
+  "font": {
+    "display": {
+      "value": "\"Rajdhani\",\"Arial Narrow\",sans-serif",
+      "use": "everything that reads: titles, labels, buttons, running text"
+    },
+    "mono": {
+      "value": "\"Share Tech Mono\",ui-monospace,Menlo,monospace",
+      "use": "times, numbers, readouts, technical details"
+    }
+  },
+  "glow": {
+    "glow": {
+      "value": "0 0 12px oklch(75% 0.18 198 / 58%), 0 0 32px oklch(75% 0.18 198 / 24%)",
+      "use": "the focused item"
+    },
+    "glowDim": {
+      "value": "0 0 8px oklch(75% 0.18 198 / 30%), 0 0 20px oklch(75% 0.18 198 / 14%)",
+      "use": "menus, dialogs, tooltips"
+    }
+  },
+  "motion": {
+    "focusMs": {
+      "value": "150ms",
+      "use": "focus change: color, scale, glow"
+    },
+    "bannerInMs": {
+      "value": "200ms",
+      "use": "info banner in"
+    },
+    "bannerOutMs": {
+      "value": "300ms",
+      "use": "info banner out"
+    },
+    "slideMs": {
+      "value": "240ms",
+      "use": "now-playing bar and playback panel sliding in and out"
+    },
+    "scrollMs": {
+      "value": "200ms",
+      "use": "guide and list scrolling"
+    }
+  },
+  "type": {
+    "t1": {
+      "value": "13px",
+      "use": "TV type step 1 of 21: control-bar captions"
+    },
+    "t2": {
+      "value": "15px",
+      "use": "TV type step 2: badges, logo chips, tiny captions"
+    },
+    "t3": {
+      "value": "17px",
+      "use": "TV type step 3: listing details (mono)"
+    },
+    "t4": {
+      "value": "19px",
+      "use": "TV type step 4: small labels, hints"
+    },
+    "t5": {
+      "value": "20px",
+      "use": "TV type step 5: readouts, chips, meta lines"
+    },
+    "t6": {
+      "value": "23px",
+      "use": "TV type step 6: .label"
+    },
+    "t7": {
+      "value": "25px",
+      "use": "TV type step 7: the base size; listing titles, buttons, tabs"
+    },
+    "t8": {
+      "value": "28px",
+      "use": "TV type step 8: row headings"
+    },
+    "t9": {
+      "value": "31px",
+      "use": "TV type step 9: cover body text"
+    },
+    "t10": {
+      "value": "35px",
+      "use": "TV type step 10: shelf headings"
+    },
+    "t11": {
+      "value": "38px",
+      "use": "TV type step 11: tile values"
+    },
+    "t12": {
+      "value": "46px",
+      "use": "TV type step 12: subtitles, app name"
+    },
+    "t13": {
+      "value": "56px",
+      "use": "TV type step 13: detail titles"
+    },
+    "t14": {
+      "value": "61px",
+      "use": "TV type step 14: banner title"
+    },
+    "t15": {
+      "value": "68px",
+      "use": "TV type step 15: page titles"
+    },
+    "t16": {
+      "value": "77px",
+      "use": "TV type step 16: info title"
+    },
+    "t17": {
+      "value": "84px",
+      "use": "TV type step 17: cover headline"
+    },
+    "t18": {
+      "value": "96px",
+      "use": "TV type step 18: channel digits"
+    },
+    "t19": {
+      "value": "115px",
+      "use": "TV type step 19: marquee wordmark"
+    },
+    "t20": {
+      "value": "130px",
+      "use": "TV type step 20: feature presentation"
+    },
+    "t21": {
+      "value": "230px",
+      "use": "TV type step 21: channel bumper number"
+    }
+  },
+  "space": {
+    "s1": {
+      "value": "2px",
+      "use": "space step 1 of 16: hairline gaps, focus outline offset"
+    },
+    "s2": {
+      "value": "4px",
+      "use": "space step 2 (phone 'xs')"
+    },
+    "s3": {
+      "value": "6px",
+      "use": "space step 3: chip padding, reduced-motion outline width"
+    },
+    "s4": {
+      "value": "8px",
+      "use": "space step 4 (phone 'sm')"
+    },
+    "s5": {
+      "value": "10px",
+      "use": "space step 5"
+    },
+    "s6": {
+      "value": "12px",
+      "use": "space step 6"
+    },
+    "s7": {
+      "value": "14px",
+      "use": "space step 7"
+    },
+    "s8": {
+      "value": "16px",
+      "use": "space step 8 (phone 'md')"
+    },
+    "s9": {
+      "value": "19px",
+      "use": "space step 9"
+    },
+    "s10": {
+      "value": "24px",
+      "use": "space step 10 (phone 'lg')"
+    },
+    "s11": {
+      "value": "27px",
+      "use": "space step 11"
+    },
+    "s12": {
+      "value": "31px",
+      "use": "space step 12"
+    },
+    "s13": {
+      "value": "38px",
+      "use": "space step 13"
+    },
+    "s14": {
+      "value": "46px",
+      "use": "space step 14"
+    },
+    "s15": {
+      "value": "58px",
+      "use": "space step 15"
+    },
+    "s16": {
+      "value": "77px",
+      "use": "space step 16"
+    },
+    "sectionGap": {
+      "value": "46px",
+      "use": "between a page's sections, and between parts side by side"
+    },
+    "headingGap": {
+      "value": "12px",
+      "use": "between a heading and what it heads"
+    },
+    "buttonGap": {
+      "value": "24px",
+      "use": "between buttons side by side: room for a focused one's growth and glow"
+    },
+    "tileGap": {
+      "value": "24px",
+      "use": "between tiles, across and down: posters, cards"
+    },
+    "chipGap": {
+      "value": "10px",
+      "use": "between chips and logos, across and down"
+    },
+    "edgeY": {
+      "value": "60px",
+      "use": "TV screen top and bottom margin (title-safe)"
+    },
+    "edgeX": {
+      "value": "80px",
+      "use": "TV screen side margins (title-safe)"
+    }
+  },
+  "touchType": {
+    "tt1": {
+      "value": "9",
+      "use": "phone/tablet type step 1, in layout units"
+    },
+    "tt2": {
+      "value": "10",
+      "use": "phone/tablet type step 2"
+    },
+    "tt3": {
+      "value": "11",
+      "use": "phone/tablet type step 3"
+    },
+    "tt4": {
+      "value": "12",
+      "use": "phone/tablet type step 4"
+    },
+    "tt5": {
+      "value": "13",
+      "use": "phone/tablet type step 5"
+    },
+    "tt6": {
+      "value": "14",
+      "use": "phone/tablet type step 6"
+    },
+    "tt7": {
+      "value": "15",
+      "use": "phone/tablet type step 7"
+    },
+    "tt8": {
+      "value": "16",
+      "use": "phone/tablet type step 8: the base size"
+    },
+    "tt9": {
+      "value": "17",
+      "use": "phone/tablet type step 9"
+    },
+    "tt10": {
+      "value": "18",
+      "use": "phone/tablet type step 10"
+    },
+    "tt11": {
+      "value": "19",
+      "use": "phone/tablet type step 11"
+    },
+    "tt12": {
+      "value": "20",
+      "use": "phone/tablet type step 12"
+    },
+    "tt13": {
+      "value": "22",
+      "use": "phone/tablet type step 13: section headings"
+    },
+    "tt14": {
+      "value": "24",
+      "use": "phone/tablet type step 14"
+    },
+    "tt15": {
+      "value": "26",
+      "use": "phone/tablet type step 15"
+    },
+    "tt16": {
+      "value": "28",
+      "use": "phone/tablet type step 16"
+    },
+    "tt17": {
+      "value": "30",
+      "use": "phone/tablet type step 17"
+    },
+    "tt18": {
+      "value": "38",
+      "use": "phone/tablet type step 18"
+    },
+    "tt19": {
+      "value": "44",
+      "use": "phone/tablet type step 19"
+    }
+  },
+  "focus": {
+    "scale": {
+      "cell": 1.045,
+      "card": 1.07,
+      "item": 1.03,
+      "button": 1.05,
+      "row": 1.02
+    }
+  },
+  "radius": {
+    "all": 0
+  }
+}

@@ -1,0 +1,36 @@
+/* Generated from tokens/aura.tokens.json 2026-11-25.1 by build/build.mjs. Don't edit; change the tokens file. */
+/* Legacy names -> AURA names. Glowcast/Streamer (tokens.css) and AURA.p (global.css) can load this instead of their own token CSS. */
+:root {
+  /* Glowcast and Streamer */
+  --guide: var(--bg);
+  --display: var(--font-display);
+  --mono: var(--font-mono);
+  /* AURA.p */
+  --bg-panel: var(--panel);
+  --bg-overlay: var(--overlay);
+  --accent: var(--focus);
+  --accent-dim: var(--focus-dim);
+  --accent-2: var(--focus);
+  --accent-2-dim: var(--focus-dim);
+  --danger-dim: color-mix(in oklch, var(--danger) 30%, transparent);
+  --success: var(--ok);
+  --glow-success: var(--glow-ok);
+  --text-dim: var(--muted);
+  --text-muted: var(--muted);
+  --text-secondary: var(--muted);
+  --text-ghost: var(--ghost);
+  --border: var(--line-strong);
+  --border-dim: var(--line);
+  --border-hover: var(--line-hover);
+  --glow-label: drop-shadow(0 0 5px var(--focus-dim)) drop-shadow(0 0 12px color-mix(in oklch, var(--focus) 16%, transparent));
+  --grid-image: none;
+  --font-body: var(--font-display);
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+}
+.theme-tron-light {
+  --accent-2: var(--live);
+  --accent-2-dim: color-mix(in oklch, var(--live) 35%, transparent);
+  --grid-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+}

@@ -1,0 +1,1402 @@
+{
+  "version": "2026-11-25.1",
+  "header": "Generated from tokens/aura.tokens.json 2026-11-25.1 by build/build.mjs. Don't edit; change the tokens file.",
+  "themes": {
+    "tron-dark": {
+      "color.bg": {
+        "value": "oklch(6% 0.015 230)",
+        "hex": "#000102",
+        "css": "var(--bg)",
+        "use": "the void: every screen's background"
+      },
+      "color.panel": {
+        "value": "oklch(12% 0.022 225)",
+        "hex": "#00070c",
+        "css": "var(--panel)",
+        "use": "menus, tiles, dialogs, cards"
+      },
+      "color.row": {
+        "value": "oklch(13% 0.025 222)",
+        "hex": "#00090e",
+        "css": "var(--row)",
+        "use": "list and channel rows"
+      },
+      "color.cell": {
+        "value": "oklch(17% 0.03 220)",
+        "hex": "#001218",
+        "css": "var(--cell)",
+        "use": "listings, poster placeholders"
+      },
+      "color.cellNow": {
+        "value": "oklch(23% 0.05 212)",
+        "hex": "#00232a",
+        "css": "var(--cell-now)",
+        "use": "listings on now, a focused list row"
+      },
+      "color.overlay": {
+        "value": "oklch(6% 0.015 230 / 96%)",
+        "hex": "#000102f5",
+        "css": "var(--overlay)",
+        "use": "modal backdrop"
+      },
+      "color.line": {
+        "value": "oklch(75% 0.18 198 / 22%)",
+        "hex": "#00ced738",
+        "css": "var(--line)",
+        "use": "panel edges and dividers"
+      },
+      "color.lineStrong": {
+        "value": "oklch(75% 0.18 198 / 45%)",
+        "hex": "#00ced773",
+        "css": "var(--line-strong)",
+        "use": "stronger dividers, input borders"
+      },
+      "color.lineHover": {
+        "value": "oklch(75% 0.18 198 / 85%)",
+        "hex": "#00ced7d9",
+        "css": "var(--line-hover)",
+        "use": "border of a pressed or hovered control"
+      },
+      "color.progressBuffer": {
+        "value": "oklch(75% 0.18 198 / 14%)",
+        "hex": "#00ced724",
+        "css": "var(--progress-buffer)",
+        "use": "buffered part of a progress line"
+      },
+      "color.text": {
+        "value": "oklch(90% 0.03 210)",
+        "hex": "#c8e4e9",
+        "css": "var(--text)",
+        "use": "main text"
+      },
+      "color.soft": {
+        "value": "oklch(80% 0.035 210)",
+        "hex": "#a5c4ca",
+        "css": "var(--soft)",
+        "use": "body text on the void"
+      },
+      "color.muted": {
+        "value": "oklch(66% 0.04 210)",
+        "hex": "#7699a0",
+        "css": "var(--muted)",
+        "use": "readouts, secondary labels"
+      },
+      "color.mutedOnCell": {
+        "value": "oklch(72% 0.04 210)",
+        "hex": "#88acb2",
+        "css": "var(--muted-on-cell)",
+        "use": "secondary text on listings"
+      },
+      "color.ghost": {
+        "value": "oklch(28% 0.03 220)",
+        "hex": "#172c33",
+        "css": "var(--ghost)",
+        "use": "decoration only: disabled glyphs, grid lines. Never text that must be read"
+      },
+      "color.ink": {
+        "value": "oklch(6% 0.015 230)",
+        "hex": "#000102",
+        "css": "var(--ink)",
+        "use": "text on a focus, live or danger fill"
+      },
+      "color.focus": {
+        "value": "oklch(75% 0.18 198)",
+        "hex": "#00ced7",
+        "css": "var(--focus)",
+        "use": "focus, selection, things you can press. Never decoration"
+      },
+      "color.focusDim": {
+        "value": "oklch(75% 0.18 198 / 35%)",
+        "hex": "#00ced759",
+        "css": "var(--focus-dim)",
+        "use": "hover affordance, a light wash of focus"
+      },
+      "color.live": {
+        "value": "oklch(72% 0.19 54)",
+        "hex": "#fc7c00",
+        "css": "var(--live)",
+        "use": "the now line, live marks, an active thumbs-up, Tron Light's second accent"
+      },
+      "color.ok": {
+        "value": "oklch(80% 0.16 165)",
+        "hex": "#2bdda4",
+        "css": "var(--ok)",
+        "use": "success, healthy"
+      },
+      "color.warn": {
+        "value": "oklch(86% 0.15 95)",
+        "hex": "#f0cf4c",
+        "css": "var(--warn)",
+        "use": "last day, warnings"
+      },
+      "color.danger": {
+        "value": "oklch(60% 0.22 330)",
+        "hex": "#c33dbd",
+        "css": "var(--danger)",
+        "use": "errors and an active thumbs-down only (Arcade Magenta)"
+      },
+      "color.info": {
+        "value": "oklch(75% 0.18 198)",
+        "hex": "#00ced7",
+        "css": "var(--info)",
+        "use": "info banners"
+      },
+      "glow.glow": {
+        "value": "0 0 12px oklch(75% 0.18 198 / 58%), 0 0 32px oklch(75% 0.18 198 / 24%)",
+        "css": "var(--glow)",
+        "use": "the focused item"
+      },
+      "glow.glowHover": {
+        "value": "0 0 16px oklch(75% 0.18 198 / 75%), 0 0 40px oklch(75% 0.18 198 / 32%)",
+        "css": "var(--glow-hover)",
+        "use": "the strong glow: a pressed primary control (touch), a hovered one (pointer)"
+      },
+      "glow.glowDim": {
+        "value": "0 0 8px oklch(75% 0.18 198 / 30%), 0 0 20px oklch(75% 0.18 198 / 14%)",
+        "css": "var(--glow-dim)",
+        "use": "menus, dialogs, tooltips"
+      },
+      "glow.glowArt": {
+        "value": "0 0 8px oklch(75% 0.18 198 / 46%), 0 0 22px oklch(75% 0.18 198 / 18%)",
+        "css": "var(--glow-art)",
+        "use": "hero artwork at rest"
+      },
+      "glow.glowArtPulse": {
+        "value": "0 0 12px oklch(75% 0.18 198 / 64%), 0 0 30px oklch(75% 0.18 198 / 26%)",
+        "css": "var(--glow-art-pulse)",
+        "use": "hero artwork at the peak of its slow pulse"
+      },
+      "glow.glowDanger": {
+        "value": "0 0 8px oklch(60% 0.22 330 / 40%), 0 0 24px oklch(60% 0.22 330 / 15%)",
+        "css": "var(--glow-danger)",
+        "use": "error banner"
+      },
+      "glow.glowOk": {
+        "value": "0 0 8px oklch(80% 0.16 165 / 40%), 0 0 24px oklch(80% 0.16 165 / 15%)",
+        "css": "var(--glow-ok)",
+        "use": "success banner"
+      },
+      "glow.glowInfo": {
+        "value": "0 0 8px oklch(75% 0.18 198 / 40%), 0 0 24px oklch(75% 0.18 198 / 15%)",
+        "css": "var(--glow-info)",
+        "use": "info banner"
+      },
+      "grid.gridLine": {
+        "value": "none",
+        "css": "var(--grid-line)",
+        "use": "no visible background grid on Tron Dark"
+      },
+      "font.display": {
+        "value": "\"Rajdhani\",\"Arial Narrow\",sans-serif",
+        "css": "var(--font-display)",
+        "use": "everything that reads: titles, labels, buttons, running text"
+      },
+      "font.mono": {
+        "value": "\"Share Tech Mono\",ui-monospace,Menlo,monospace",
+        "css": "var(--font-mono)",
+        "use": "times, numbers, readouts, technical details"
+      },
+      "typeRoles.display": {
+        "value": "300 36px/1.1 display 0.5em",
+        "css": "var(--type-display)",
+        "use": "phone: logo, login title"
+      },
+      "typeRoles.headline": {
+        "value": "600 16px/1.25 display 0.08em",
+        "css": "var(--type-headline)",
+        "use": "phone: track and section titles"
+      },
+      "typeRoles.body": {
+        "value": "500 14px/1.45 display 0",
+        "css": "var(--type-body)",
+        "use": "phone: running text"
+      },
+      "typeRoles.label": {
+        "value": "600 12px/1 display 0.18em",
+        "css": "var(--type-label)",
+        "use": "phone: toggle and field labels; always upper case"
+      },
+      "typeRoles.button": {
+        "value": "600 12px/1 display 0.15em",
+        "css": "var(--type-button)",
+        "use": "phone: button labels; always upper case"
+      },
+      "typeRoles.tab": {
+        "value": "600 10px/1 display 0.12em",
+        "css": "var(--type-tab)",
+        "use": "phone: tab bar labels; always upper case"
+      },
+      "typeRoles.mono": {
+        "value": "400 12px/1.4 mono 0.04em",
+        "css": "var(--type-mono)",
+        "use": "phone: track artist, banners, readouts (times are 10px)"
+      },
+      "type.t1": {
+        "value": "13px",
+        "css": "var(--t1)",
+        "use": "TV type step 1 of 21: control-bar captions"
+      },
+      "type.t2": {
+        "value": "15px",
+        "css": "var(--t2)",
+        "use": "TV type step 2: badges, logo chips, tiny captions"
+      },
+      "type.t3": {
+        "value": "17px",
+        "css": "var(--t3)",
+        "use": "TV type step 3: listing details (mono)"
+      },
+      "type.t4": {
+        "value": "19px",
+        "css": "var(--t4)",
+        "use": "TV type step 4: small labels, hints"
+      },
+      "type.t5": {
+        "value": "20px",
+        "css": "var(--t5)",
+        "use": "TV type step 5: readouts, chips, meta lines"
+      },
+      "type.t6": {
+        "value": "23px",
+        "css": "var(--t6)",
+        "use": "TV type step 6: .label"
+      },
+      "type.t7": {
+        "value": "25px",
+        "css": "var(--t7)",
+        "use": "TV type step 7: the base size; listing titles, buttons, tabs"
+      },
+      "type.t8": {
+        "value": "28px",
+        "css": "var(--t8)",
+        "use": "TV type step 8: row headings"
+      },
+      "type.t9": {
+        "value": "31px",
+        "css": "var(--t9)",
+        "use": "TV type step 9: cover body text"
+      },
+      "type.t10": {
+        "value": "35px",
+        "css": "var(--t10)",
+        "use": "TV type step 10: shelf headings"
+      },
+      "type.t11": {
+        "value": "38px",
+        "css": "var(--t11)",
+        "use": "TV type step 11: tile values"
+      },
+      "type.t12": {
+        "value": "46px",
+        "css": "var(--t12)",
+        "use": "TV type step 12: subtitles, app name"
+      },
+      "type.t13": {
+        "value": "56px",
+        "css": "var(--t13)",
+        "use": "TV type step 13: detail titles"
+      },
+      "type.t14": {
+        "value": "61px",
+        "css": "var(--t14)",
+        "use": "TV type step 14: banner title"
+      },
+      "type.t15": {
+        "value": "68px",
+        "css": "var(--t15)",
+        "use": "TV type step 15: page titles"
+      },
+      "type.t16": {
+        "value": "77px",
+        "css": "var(--t16)",
+        "use": "TV type step 16: info title"
+      },
+      "type.t17": {
+        "value": "84px",
+        "css": "var(--t17)",
+        "use": "TV type step 17: cover headline"
+      },
+      "type.t18": {
+        "value": "96px",
+        "css": "var(--t18)",
+        "use": "TV type step 18: channel digits"
+      },
+      "type.t19": {
+        "value": "115px",
+        "css": "var(--t19)",
+        "use": "TV type step 19: marquee wordmark"
+      },
+      "type.t20": {
+        "value": "130px",
+        "css": "var(--t20)",
+        "use": "TV type step 20: feature presentation"
+      },
+      "type.t21": {
+        "value": "230px",
+        "css": "var(--t21)",
+        "use": "TV type step 21: channel bumper number"
+      },
+      "touchType.tt1": {
+        "value": "9",
+        "css": "var(--tt1)",
+        "use": "phone/tablet type step 1, in layout units"
+      },
+      "touchType.tt2": {
+        "value": "10",
+        "css": "var(--tt2)",
+        "use": "phone/tablet type step 2"
+      },
+      "touchType.tt3": {
+        "value": "11",
+        "css": "var(--tt3)",
+        "use": "phone/tablet type step 3"
+      },
+      "touchType.tt4": {
+        "value": "12",
+        "css": "var(--tt4)",
+        "use": "phone/tablet type step 4"
+      },
+      "touchType.tt5": {
+        "value": "13",
+        "css": "var(--tt5)",
+        "use": "phone/tablet type step 5"
+      },
+      "touchType.tt6": {
+        "value": "14",
+        "css": "var(--tt6)",
+        "use": "phone/tablet type step 6"
+      },
+      "touchType.tt7": {
+        "value": "15",
+        "css": "var(--tt7)",
+        "use": "phone/tablet type step 7"
+      },
+      "touchType.tt8": {
+        "value": "16",
+        "css": "var(--tt8)",
+        "use": "phone/tablet type step 8: the base size"
+      },
+      "touchType.tt9": {
+        "value": "17",
+        "css": "var(--tt9)",
+        "use": "phone/tablet type step 9"
+      },
+      "touchType.tt10": {
+        "value": "18",
+        "css": "var(--tt10)",
+        "use": "phone/tablet type step 10"
+      },
+      "touchType.tt11": {
+        "value": "19",
+        "css": "var(--tt11)",
+        "use": "phone/tablet type step 11"
+      },
+      "touchType.tt12": {
+        "value": "20",
+        "css": "var(--tt12)",
+        "use": "phone/tablet type step 12"
+      },
+      "touchType.tt13": {
+        "value": "22",
+        "css": "var(--tt13)",
+        "use": "phone/tablet type step 13: section headings"
+      },
+      "touchType.tt14": {
+        "value": "24",
+        "css": "var(--tt14)",
+        "use": "phone/tablet type step 14"
+      },
+      "touchType.tt15": {
+        "value": "26",
+        "css": "var(--tt15)",
+        "use": "phone/tablet type step 15"
+      },
+      "touchType.tt16": {
+        "value": "28",
+        "css": "var(--tt16)",
+        "use": "phone/tablet type step 16"
+      },
+      "touchType.tt17": {
+        "value": "30",
+        "css": "var(--tt17)",
+        "use": "phone/tablet type step 17"
+      },
+      "touchType.tt18": {
+        "value": "38",
+        "css": "var(--tt18)",
+        "use": "phone/tablet type step 18"
+      },
+      "touchType.tt19": {
+        "value": "44",
+        "css": "var(--tt19)",
+        "use": "phone/tablet type step 19"
+      },
+      "space.s1": {
+        "value": "2px",
+        "css": "var(--s1)",
+        "use": "space step 1 of 16: hairline gaps, focus outline offset"
+      },
+      "space.s2": {
+        "value": "4px",
+        "css": "var(--s2)",
+        "use": "space step 2 (phone 'xs')"
+      },
+      "space.s3": {
+        "value": "6px",
+        "css": "var(--s3)",
+        "use": "space step 3: chip padding, reduced-motion outline width"
+      },
+      "space.s4": {
+        "value": "8px",
+        "css": "var(--s4)",
+        "use": "space step 4 (phone 'sm')"
+      },
+      "space.s5": {
+        "value": "10px",
+        "css": "var(--s5)",
+        "use": "space step 5"
+      },
+      "space.s6": {
+        "value": "12px",
+        "css": "var(--s6)",
+        "use": "space step 6"
+      },
+      "space.s7": {
+        "value": "14px",
+        "css": "var(--s7)",
+        "use": "space step 7"
+      },
+      "space.s8": {
+        "value": "16px",
+        "css": "var(--s8)",
+        "use": "space step 8 (phone 'md')"
+      },
+      "space.s9": {
+        "value": "19px",
+        "css": "var(--s9)",
+        "use": "space step 9"
+      },
+      "space.s10": {
+        "value": "24px",
+        "css": "var(--s10)",
+        "use": "space step 10 (phone 'lg')"
+      },
+      "space.s11": {
+        "value": "27px",
+        "css": "var(--s11)",
+        "use": "space step 11"
+      },
+      "space.s12": {
+        "value": "31px",
+        "css": "var(--s12)",
+        "use": "space step 12"
+      },
+      "space.s13": {
+        "value": "38px",
+        "css": "var(--s13)",
+        "use": "space step 13"
+      },
+      "space.s14": {
+        "value": "46px",
+        "css": "var(--s14)",
+        "use": "space step 14"
+      },
+      "space.s15": {
+        "value": "58px",
+        "css": "var(--s15)",
+        "use": "space step 15"
+      },
+      "space.s16": {
+        "value": "77px",
+        "css": "var(--s16)",
+        "use": "space step 16"
+      },
+      "space.sectionGap": {
+        "value": "46px",
+        "css": "var(--section-gap)",
+        "use": "between a page's sections, and between parts side by side"
+      },
+      "space.headingGap": {
+        "value": "12px",
+        "css": "var(--heading-gap)",
+        "use": "between a heading and what it heads"
+      },
+      "space.buttonGap": {
+        "value": "24px",
+        "css": "var(--button-gap)",
+        "use": "between buttons side by side: room for a focused one's growth and glow"
+      },
+      "space.tileGap": {
+        "value": "24px",
+        "css": "var(--tile-gap)",
+        "use": "between tiles, across and down: posters, cards"
+      },
+      "space.chipGap": {
+        "value": "10px",
+        "css": "var(--chip-gap)",
+        "use": "between chips and logos, across and down"
+      },
+      "space.edgeY": {
+        "value": "60px",
+        "css": "var(--edge-y)",
+        "use": "TV screen top and bottom margin (title-safe)"
+      },
+      "space.edgeX": {
+        "value": "80px",
+        "css": "var(--edge-x)",
+        "use": "TV screen side margins (title-safe)"
+      },
+      "shape.radius": {
+        "value": "0px",
+        "css": "var(--radius)",
+        "use": "every corner of every control, panel and frame. Tron is square"
+      },
+      "shape.notchSize": {
+        "value": "10px",
+        "css": "var(--notch-size)",
+        "use": "arm length of the L-shaped corner notches on framed artwork"
+      },
+      "shape.notchCard": {
+        "value": "8px",
+        "css": "var(--notch-card)",
+        "use": "arm length of the notches on a station card while pressed or its menu is open"
+      },
+      "shape.notchWeight": {
+        "value": "2px",
+        "css": "var(--notch-weight)",
+        "use": "stroke of the corner notches"
+      },
+      "shape.gridSize": {
+        "value": "24px",
+        "css": "var(--grid-size)",
+        "use": "cell of the background Grid (where a theme draws one)"
+      },
+      "shape.hairline": {
+        "value": "1px",
+        "css": "var(--hairline)",
+        "use": "panel edges, dividers, chip and badge outlines"
+      },
+      "shape.ring": {
+        "value": "3px",
+        "css": "var(--ring)",
+        "use": "focus ring around posters, cards and framed art"
+      },
+      "motion.pressMs": {
+        "value": "80ms",
+        "css": "var(--press-ms)",
+        "use": "press feedback on a control"
+      },
+      "motion.fadeMs": {
+        "value": "120ms",
+        "css": "var(--fade-ms)",
+        "use": "tab pane fade-in"
+      },
+      "motion.focusMs": {
+        "value": "150ms",
+        "css": "var(--focus-ms)",
+        "use": "focus change: color, scale, glow"
+      },
+      "motion.bannerInMs": {
+        "value": "200ms",
+        "css": "var(--banner-in-ms)",
+        "use": "info banner in"
+      },
+      "motion.scrollMs": {
+        "value": "200ms",
+        "css": "var(--scroll-ms)",
+        "use": "guide and list scrolling"
+      },
+      "motion.slideMs": {
+        "value": "240ms",
+        "css": "var(--slide-ms)",
+        "use": "now-playing bar and playback panel sliding in and out"
+      },
+      "motion.bannerOutMs": {
+        "value": "300ms",
+        "css": "var(--banner-out-ms)",
+        "use": "info banner out"
+      },
+      "motion.bannerHoldMs": {
+        "value": "4000ms",
+        "css": "var(--banner-hold-ms)",
+        "use": "how long a message banner stays before it goes by itself"
+      },
+      "motion.cubeTurnYMs": {
+        "value": "1800ms",
+        "css": "var(--cube-turn-y-ms)",
+        "use": "the cube spinner's turn about its vertical axis"
+      },
+      "motion.cubeTurnXMs": {
+        "value": "2700ms",
+        "css": "var(--cube-turn-x-ms)",
+        "use": "the cube spinner's turn about its horizontal axis; unequal to Y so it tumbles, never repeats a flat spin"
+      },
+      "motion.loadDelayMs": {
+        "value": "200ms",
+        "css": "var(--load-delay-ms)",
+        "use": "a loading line stays hidden this long, so an answer that comes at once never shows one"
+      },
+      "motion.glideMs": {
+        "value": "1600ms",
+        "css": "var(--glide-ms)",
+        "use": "one glide of the lit piece along the loading line"
+      },
+      "motion.sweepMs": {
+        "value": "2400ms",
+        "css": "var(--sweep-ms)",
+        "use": "one pass of the orange now line across the tuning screen's guide bars"
+      },
+      "motion.pulseMs": {
+        "value": "4000ms",
+        "css": "var(--pulse-ms)",
+        "use": "one breath of the hero-art glow pulse"
+      },
+      "easing.enter": {
+        "value": "ease-out",
+        "css": "var(--ease-enter)",
+        "use": "things arriving or growing"
+      },
+      "easing.exit": {
+        "value": "ease-in",
+        "css": "var(--ease-exit)",
+        "use": "things leaving"
+      },
+      "easing.move": {
+        "value": "ease-in-out",
+        "css": "var(--ease-move)",
+        "use": "lists and rows scrolling to a new place"
+      },
+      "easing.constant": {
+        "value": "linear",
+        "css": "var(--ease-constant)",
+        "use": "spinners, sweeps, progress"
+      },
+      "focus.scale.cell": {
+        "value": 1.045,
+        "css": "var(--focus-scale-cell)",
+        "use": "guide cells, library posters"
+      },
+      "focus.scale.card": {
+        "value": 1.07,
+        "css": "var(--focus-scale-card)",
+        "use": "16:9 cards, poster rows"
+      },
+      "focus.scale.item": {
+        "value": 1.03,
+        "css": "var(--focus-scale-item)",
+        "use": "channel and list rows"
+      },
+      "focus.scale.button": {
+        "value": 1.05,
+        "css": "var(--focus-scale-button)",
+        "use": "buttons: the fill grows, the text does not"
+      },
+      "focus.scale.row": {
+        "value": 1.02,
+        "css": "var(--focus-scale-row)",
+        "use": "playback panel rows, release rows"
+      }
+    },
+    "tron-light": {
+      "color.bg": {
+        "value": "oklch(17% 0.07 232)",
+        "hex": "#001228",
+        "css": "var(--bg)",
+        "use": "the grid: every screen's background"
+      },
+      "color.panel": {
+        "value": "oklch(13% 0.055 234)",
+        "hex": "#000919",
+        "css": "var(--panel)",
+        "use": "menus, tiles, dialogs, cards (darker than the grid on purpose)"
+      },
+      "color.row": {
+        "value": "oklch(20% 0.07 232)",
+        "hex": "#001a30",
+        "css": "var(--row)",
+        "use": "list rows",
+        "derived": true
+      },
+      "color.cell": {
+        "value": "oklch(23% 0.075 228)",
+        "hex": "#002238",
+        "css": "var(--cell)",
+        "use": "listings, poster placeholders",
+        "derived": true
+      },
+      "color.cellNow": {
+        "value": "oklch(28% 0.09 215)",
+        "hex": "#003244",
+        "css": "var(--cell-now)",
+        "use": "listings on now, a focused list row",
+        "derived": true
+      },
+      "color.overlay": {
+        "value": "oklch(17% 0.07 232 / 96%)",
+        "hex": "#001228f5",
+        "css": "var(--overlay)",
+        "use": "modal backdrop"
+      },
+      "color.line": {
+        "value": "oklch(80% 0.17 213 / 18%)",
+        "hex": "#00d8fe2e",
+        "css": "var(--line)",
+        "use": "panel edges and dividers"
+      },
+      "color.lineStrong": {
+        "value": "oklch(80% 0.17 213 / 45%)",
+        "hex": "#00d8fe73",
+        "css": "var(--line-strong)",
+        "use": "stronger dividers, input borders"
+      },
+      "color.lineHover": {
+        "value": "oklch(80% 0.17 213 / 88%)",
+        "hex": "#00d8fee0",
+        "css": "var(--line-hover)",
+        "use": "border of a hovered control"
+      },
+      "color.progressBuffer": {
+        "value": "oklch(80% 0.17 213 / 16%)",
+        "hex": "#00d8fe29",
+        "css": "var(--progress-buffer)",
+        "use": "buffered part of a progress line"
+      },
+      "color.text": {
+        "value": "oklch(91% 0.05 213)",
+        "hex": "#bcebf5",
+        "css": "var(--text)",
+        "use": "main text"
+      },
+      "color.soft": {
+        "value": "oklch(82% 0.06 214)",
+        "hex": "#97cfdc",
+        "css": "var(--soft)",
+        "use": "body text",
+        "derived": true
+      },
+      "color.muted": {
+        "value": "oklch(60% 0.07 218)",
+        "hex": "#4c8b9c",
+        "css": "var(--muted)",
+        "use": "readouts, secondary labels"
+      },
+      "color.mutedOnCell": {
+        "value": "oklch(66% 0.07 218)",
+        "hex": "#5e9daf",
+        "css": "var(--muted-on-cell)",
+        "use": "secondary text on listings",
+        "derived": true
+      },
+      "color.ghost": {
+        "value": "oklch(32% 0.06 228)",
+        "hex": "#04384b",
+        "css": "var(--ghost)",
+        "use": "decoration only"
+      },
+      "color.ink": {
+        "value": "oklch(17% 0.07 232)",
+        "hex": "#001228",
+        "css": "var(--ink)",
+        "use": "text on a focus, live or danger fill"
+      },
+      "color.focus": {
+        "value": "oklch(80% 0.17 213)",
+        "hex": "#00d8fe",
+        "css": "var(--focus)",
+        "use": "focus, selection, things you can press"
+      },
+      "color.focusDim": {
+        "value": "oklch(80% 0.17 213 / 40%)",
+        "hex": "#00d8fe66",
+        "css": "var(--focus-dim)",
+        "use": "hover affordance"
+      },
+      "color.live": {
+        "value": "oklch(72% 0.19 54)",
+        "hex": "#fc7c00",
+        "css": "var(--live)",
+        "use": "the now line, live marks, the orange second accent"
+      },
+      "color.ok": {
+        "value": "oklch(68% 0.15 155)",
+        "hex": "#32b36e",
+        "css": "var(--ok)",
+        "use": "success"
+      },
+      "color.warn": {
+        "value": "oklch(86% 0.15 95)",
+        "hex": "#f0cf4c",
+        "css": "var(--warn)",
+        "use": "warnings",
+        "derived": true
+      },
+      "color.danger": {
+        "value": "oklch(66% 0.21 318)",
+        "hex": "#c55ee3",
+        "css": "var(--danger)",
+        "use": "errors only (AURA.p ships 55%, 3.46:1 on the grid; raised for contrast)"
+      },
+      "color.info": {
+        "value": "oklch(80% 0.17 213)",
+        "hex": "#00d8fe",
+        "css": "var(--info)",
+        "use": "info banners"
+      },
+      "glow.glow": {
+        "value": "0 0 12px oklch(80% 0.17 213 / 55%), 0 0 32px oklch(80% 0.17 213 / 20%)",
+        "css": "var(--glow)",
+        "use": "the focused item"
+      },
+      "glow.glowHover": {
+        "value": "0 0 16px oklch(80% 0.17 213 / 70%), 0 0 40px oklch(80% 0.17 213 / 30%)",
+        "css": "var(--glow-hover)",
+        "use": "the strong glow: a pressed or hovered primary control"
+      },
+      "glow.glowDim": {
+        "value": "0 0 8px oklch(80% 0.17 213 / 38%), 0 0 18px oklch(80% 0.17 213 / 14%)",
+        "css": "var(--glow-dim)",
+        "use": "menus, dialogs, tooltips"
+      },
+      "glow.glowArt": {
+        "value": "0 0 8px oklch(80% 0.17 213 / 42%), 0 0 18px oklch(80% 0.17 213 / 15%)",
+        "css": "var(--glow-art)",
+        "use": "hero artwork at rest"
+      },
+      "glow.glowArtPulse": {
+        "value": "0 0 10px oklch(80% 0.17 213 / 58%), 0 0 22px oklch(80% 0.17 213 / 22%)",
+        "css": "var(--glow-art-pulse)",
+        "use": "hero artwork at the peak of its pulse"
+      },
+      "glow.glowDanger": {
+        "value": "0 0 12px oklch(66% 0.21 318 / 50%), 0 0 32px oklch(66% 0.21 318 / 18%)",
+        "css": "var(--glow-danger)",
+        "use": "error banner"
+      },
+      "glow.glowOk": {
+        "value": "0 0 12px oklch(68% 0.15 155 / 45%), 0 0 32px oklch(68% 0.15 155 / 16%)",
+        "css": "var(--glow-ok)",
+        "use": "success banner"
+      },
+      "glow.glowInfo": {
+        "value": "0 0 12px oklch(80% 0.17 213 / 45%), 0 0 32px oklch(80% 0.17 213 / 16%)",
+        "css": "var(--glow-info)",
+        "use": "info banner"
+      },
+      "grid.gridLine": {
+        "value": "oklch(28% 0.09 195 / 35%)",
+        "css": "var(--grid-line)",
+        "use": "1px line of the visible background Grid, every gridSize"
+      },
+      "font.display": {
+        "value": "\"Rajdhani\",\"Arial Narrow\",sans-serif",
+        "css": "var(--font-display)",
+        "use": "everything that reads: titles, labels, buttons, running text"
+      },
+      "font.mono": {
+        "value": "\"Share Tech Mono\",ui-monospace,Menlo,monospace",
+        "css": "var(--font-mono)",
+        "use": "times, numbers, readouts, technical details"
+      },
+      "typeRoles.display": {
+        "value": "300 36px/1.1 display 0.5em",
+        "css": "var(--type-display)",
+        "use": "phone: logo, login title"
+      },
+      "typeRoles.headline": {
+        "value": "600 16px/1.25 display 0.08em",
+        "css": "var(--type-headline)",
+        "use": "phone: track and section titles"
+      },
+      "typeRoles.body": {
+        "value": "500 14px/1.45 display 0",
+        "css": "var(--type-body)",
+        "use": "phone: running text"
+      },
+      "typeRoles.label": {
+        "value": "600 12px/1 display 0.18em",
+        "css": "var(--type-label)",
+        "use": "phone: toggle and field labels; always upper case"
+      },
+      "typeRoles.button": {
+        "value": "600 12px/1 display 0.15em",
+        "css": "var(--type-button)",
+        "use": "phone: button labels; always upper case"
+      },
+      "typeRoles.tab": {
+        "value": "600 10px/1 display 0.12em",
+        "css": "var(--type-tab)",
+        "use": "phone: tab bar labels; always upper case"
+      },
+      "typeRoles.mono": {
+        "value": "400 12px/1.4 mono 0.04em",
+        "css": "var(--type-mono)",
+        "use": "phone: track artist, banners, readouts (times are 10px)"
+      },
+      "type.t1": {
+        "value": "13px",
+        "css": "var(--t1)",
+        "use": "TV type step 1 of 21: control-bar captions"
+      },
+      "type.t2": {
+        "value": "15px",
+        "css": "var(--t2)",
+        "use": "TV type step 2: badges, logo chips, tiny captions"
+      },
+      "type.t3": {
+        "value": "17px",
+        "css": "var(--t3)",
+        "use": "TV type step 3: listing details (mono)"
+      },
+      "type.t4": {
+        "value": "19px",
+        "css": "var(--t4)",
+        "use": "TV type step 4: small labels, hints"
+      },
+      "type.t5": {
+        "value": "20px",
+        "css": "var(--t5)",
+        "use": "TV type step 5: readouts, chips, meta lines"
+      },
+      "type.t6": {
+        "value": "23px",
+        "css": "var(--t6)",
+        "use": "TV type step 6: .label"
+      },
+      "type.t7": {
+        "value": "25px",
+        "css": "var(--t7)",
+        "use": "TV type step 7: the base size; listing titles, buttons, tabs"
+      },
+      "type.t8": {
+        "value": "28px",
+        "css": "var(--t8)",
+        "use": "TV type step 8: row headings"
+      },
+      "type.t9": {
+        "value": "31px",
+        "css": "var(--t9)",
+        "use": "TV type step 9: cover body text"
+      },
+      "type.t10": {
+        "value": "35px",
+        "css": "var(--t10)",
+        "use": "TV type step 10: shelf headings"
+      },
+      "type.t11": {
+        "value": "38px",
+        "css": "var(--t11)",
+        "use": "TV type step 11: tile values"
+      },
+      "type.t12": {
+        "value": "46px",
+        "css": "var(--t12)",
+        "use": "TV type step 12: subtitles, app name"
+      },
+      "type.t13": {
+        "value": "56px",
+        "css": "var(--t13)",
+        "use": "TV type step 13: detail titles"
+      },
+      "type.t14": {
+        "value": "61px",
+        "css": "var(--t14)",
+        "use": "TV type step 14: banner title"
+      },
+      "type.t15": {
+        "value": "68px",
+        "css": "var(--t15)",
+        "use": "TV type step 15: page titles"
+      },
+      "type.t16": {
+        "value": "77px",
+        "css": "var(--t16)",
+        "use": "TV type step 16: info title"
+      },
+      "type.t17": {
+        "value": "84px",
+        "css": "var(--t17)",
+        "use": "TV type step 17: cover headline"
+      },
+      "type.t18": {
+        "value": "96px",
+        "css": "var(--t18)",
+        "use": "TV type step 18: channel digits"
+      },
+      "type.t19": {
+        "value": "115px",
+        "css": "var(--t19)",
+        "use": "TV type step 19: marquee wordmark"
+      },
+      "type.t20": {
+        "value": "130px",
+        "css": "var(--t20)",
+        "use": "TV type step 20: feature presentation"
+      },
+      "type.t21": {
+        "value": "230px",
+        "css": "var(--t21)",
+        "use": "TV type step 21: channel bumper number"
+      },
+      "touchType.tt1": {
+        "value": "9",
+        "css": "var(--tt1)",
+        "use": "phone/tablet type step 1, in layout units"
+      },
+      "touchType.tt2": {
+        "value": "10",
+        "css": "var(--tt2)",
+        "use": "phone/tablet type step 2"
+      },
+      "touchType.tt3": {
+        "value": "11",
+        "css": "var(--tt3)",
+        "use": "phone/tablet type step 3"
+      },
+      "touchType.tt4": {
+        "value": "12",
+        "css": "var(--tt4)",
+        "use": "phone/tablet type step 4"
+      },
+      "touchType.tt5": {
+        "value": "13",
+        "css": "var(--tt5)",
+        "use": "phone/tablet type step 5"
+      },
+      "touchType.tt6": {
+        "value": "14",
+        "css": "var(--tt6)",
+        "use": "phone/tablet type step 6"
+      },
+      "touchType.tt7": {
+        "value": "15",
+        "css": "var(--tt7)",
+        "use": "phone/tablet type step 7"
+      },
+      "touchType.tt8": {
+        "value": "16",
+        "css": "var(--tt8)",
+        "use": "phone/tablet type step 8: the base size"
+      },
+      "touchType.tt9": {
+        "value": "17",
+        "css": "var(--tt9)",
+        "use": "phone/tablet type step 9"
+      },
+      "touchType.tt10": {
+        "value": "18",
+        "css": "var(--tt10)",
+        "use": "phone/tablet type step 10"
+      },
+      "touchType.tt11": {
+        "value": "19",
+        "css": "var(--tt11)",
+        "use": "phone/tablet type step 11"
+      },
+      "touchType.tt12": {
+        "value": "20",
+        "css": "var(--tt12)",
+        "use": "phone/tablet type step 12"
+      },
+      "touchType.tt13": {
+        "value": "22",
+        "css": "var(--tt13)",
+        "use": "phone/tablet type step 13: section headings"
+      },
+      "touchType.tt14": {
+        "value": "24",
+        "css": "var(--tt14)",
+        "use": "phone/tablet type step 14"
+      },
+      "touchType.tt15": {
+        "value": "26",
+        "css": "var(--tt15)",
+        "use": "phone/tablet type step 15"
+      },
+      "touchType.tt16": {
+        "value": "28",
+        "css": "var(--tt16)",
+        "use": "phone/tablet type step 16"
+      },
+      "touchType.tt17": {
+        "value": "30",
+        "css": "var(--tt17)",
+        "use": "phone/tablet type step 17"
+      },
+      "touchType.tt18": {
+        "value": "38",
+        "css": "var(--tt18)",
+        "use": "phone/tablet type step 18"
+      },
+      "touchType.tt19": {
+        "value": "44",
+        "css": "var(--tt19)",
+        "use": "phone/tablet type step 19"
+      },
+      "space.s1": {
+        "value": "2px",
+        "css": "var(--s1)",
+        "use": "space step 1 of 16: hairline gaps, focus outline offset"
+      },
+      "space.s2": {
+        "value": "4px",
+        "css": "var(--s2)",
+        "use": "space step 2 (phone 'xs')"
+      },
+      "space.s3": {
+        "value": "6px",
+        "css": "var(--s3)",
+        "use": "space step 3: chip padding, reduced-motion outline width"
+      },
+      "space.s4": {
+        "value": "8px",
+        "css": "var(--s4)",
+        "use": "space step 4 (phone 'sm')"
+      },
+      "space.s5": {
+        "value": "10px",
+        "css": "var(--s5)",
+        "use": "space step 5"
+      },
+      "space.s6": {
+        "value": "12px",
+        "css": "var(--s6)",
+        "use": "space step 6"
+      },
+      "space.s7": {
+        "value": "14px",
+        "css": "var(--s7)",
+        "use": "space step 7"
+      },
+      "space.s8": {
+        "value": "16px",
+        "css": "var(--s8)",
+        "use": "space step 8 (phone 'md')"
+      },
+      "space.s9": {
+        "value": "19px",
+        "css": "var(--s9)",
+        "use": "space step 9"
+      },
+      "space.s10": {
+        "value": "24px",
+        "css": "var(--s10)",
+        "use": "space step 10 (phone 'lg')"
+      },
+      "space.s11": {
+        "value": "27px",
+        "css": "var(--s11)",
+        "use": "space step 11"
+      },
+      "space.s12": {
+        "value": "31px",
+        "css": "var(--s12)",
+        "use": "space step 12"
+      },
+      "space.s13": {
+        "value": "38px",
+        "css": "var(--s13)",
+        "use": "space step 13"
+      },
+      "space.s14": {
+        "value": "46px",
+        "css": "var(--s14)",
+        "use": "space step 14"
+      },
+      "space.s15": {
+        "value": "58px",
+        "css": "var(--s15)",
+        "use": "space step 15"
+      },
+      "space.s16": {
+        "value": "77px",
+        "css": "var(--s16)",
+        "use": "space step 16"
+      },
+      "space.sectionGap": {
+        "value": "46px",
+        "css": "var(--section-gap)",
+        "use": "between a page's sections, and between parts side by side"
+      },
+      "space.headingGap": {
+        "value": "12px",
+        "css": "var(--heading-gap)",
+        "use": "between a heading and what it heads"
+      },
+      "space.buttonGap": {
+        "value": "24px",
+        "css": "var(--button-gap)",
+        "use": "between buttons side by side: room for a focused one's growth and glow"
+      },
+      "space.tileGap": {
+        "value": "24px",
+        "css": "var(--tile-gap)",
+        "use": "between tiles, across and down: posters, cards"
+      },
+      "space.chipGap": {
+        "value": "10px",
+        "css": "var(--chip-gap)",
+        "use": "between chips and logos, across and down"
+      },
+      "space.edgeY": {
+        "value": "60px",
+        "css": "var(--edge-y)",
+        "use": "TV screen top and bottom margin (title-safe)"
+      },
+      "space.edgeX": {
+        "value": "80px",
+        "css": "var(--edge-x)",
+        "use": "TV screen side margins (title-safe)"
+      },
+      "shape.radius": {
+        "value": "0px",
+        "css": "var(--radius)",
+        "use": "every corner of every control, panel and frame. Tron is square"
+      },
+      "shape.notchSize": {
+        "value": "10px",
+        "css": "var(--notch-size)",
+        "use": "arm length of the L-shaped corner notches on framed artwork"
+      },
+      "shape.notchCard": {
+        "value": "8px",
+        "css": "var(--notch-card)",
+        "use": "arm length of the notches on a station card while pressed or its menu is open"
+      },
+      "shape.notchWeight": {
+        "value": "2px",
+        "css": "var(--notch-weight)",
+        "use": "stroke of the corner notches"
+      },
+      "shape.gridSize": {
+        "value": "24px",
+        "css": "var(--grid-size)",
+        "use": "cell of the background Grid (where a theme draws one)"
+      },
+      "shape.hairline": {
+        "value": "1px",
+        "css": "var(--hairline)",
+        "use": "panel edges, dividers, chip and badge outlines"
+      },
+      "shape.ring": {
+        "value": "3px",
+        "css": "var(--ring)",
+        "use": "focus ring around posters, cards and framed art"
+      },
+      "motion.pressMs": {
+        "value": "80ms",
+        "css": "var(--press-ms)",
+        "use": "press feedback on a control"
+      },
+      "motion.fadeMs": {
+        "value": "120ms",
+        "css": "var(--fade-ms)",
+        "use": "tab pane fade-in"
+      },
+      "motion.focusMs": {
+        "value": "150ms",
+        "css": "var(--focus-ms)",
+        "use": "focus change: color, scale, glow"
+      },
+      "motion.bannerInMs": {
+        "value": "200ms",
+        "css": "var(--banner-in-ms)",
+        "use": "info banner in"
+      },
+      "motion.scrollMs": {
+        "value": "200ms",
+        "css": "var(--scroll-ms)",
+        "use": "guide and list scrolling"
+      },
+      "motion.slideMs": {
+        "value": "240ms",
+        "css": "var(--slide-ms)",
+        "use": "now-playing bar and playback panel sliding in and out"
+      },
+      "motion.bannerOutMs": {
+        "value": "300ms",
+        "css": "var(--banner-out-ms)",
+        "use": "info banner out"
+      },
+      "motion.bannerHoldMs": {
+        "value": "4000ms",
+        "css": "var(--banner-hold-ms)",
+        "use": "how long a message banner stays before it goes by itself"
+      },
+      "motion.cubeTurnYMs": {
+        "value": "1800ms",
+        "css": "var(--cube-turn-y-ms)",
+        "use": "the cube spinner's turn about its vertical axis"
+      },
+      "motion.cubeTurnXMs": {
+        "value": "2700ms",
+        "css": "var(--cube-turn-x-ms)",
+        "use": "the cube spinner's turn about its horizontal axis; unequal to Y so it tumbles, never repeats a flat spin"
+      },
+      "motion.loadDelayMs": {
+        "value": "200ms",
+        "css": "var(--load-delay-ms)",
+        "use": "a loading line stays hidden this long, so an answer that comes at once never shows one"
+      },
+      "motion.glideMs": {
+        "value": "1600ms",
+        "css": "var(--glide-ms)",
+        "use": "one glide of the lit piece along the loading line"
+      },
+      "motion.sweepMs": {
+        "value": "2400ms",
+        "css": "var(--sweep-ms)",
+        "use": "one pass of the orange now line across the tuning screen's guide bars"
+      },
+      "motion.pulseMs": {
+        "value": "4000ms",
+        "css": "var(--pulse-ms)",
+        "use": "one breath of the hero-art glow pulse"
+      },
+      "easing.enter": {
+        "value": "ease-out",
+        "css": "var(--ease-enter)",
+        "use": "things arriving or growing"
+      },
+      "easing.exit": {
+        "value": "ease-in",
+        "css": "var(--ease-exit)",
+        "use": "things leaving"
+      },
+      "easing.move": {
+        "value": "ease-in-out",
+        "css": "var(--ease-move)",
+        "use": "lists and rows scrolling to a new place"
+      },
+      "easing.constant": {
+        "value": "linear",
+        "css": "var(--ease-constant)",
+        "use": "spinners, sweeps, progress"
+      },
+      "focus.scale.cell": {
+        "value": 1.045,
+        "css": "var(--focus-scale-cell)",
+        "use": "guide cells, library posters"
+      },
+      "focus.scale.card": {
+        "value": 1.07,
+        "css": "var(--focus-scale-card)",
+        "use": "16:9 cards, poster rows"
+      },
+      "focus.scale.item": {
+        "value": 1.03,
+        "css": "var(--focus-scale-item)",
+        "use": "channel and list rows"
+      },
+      "focus.scale.button": {
+        "value": 1.05,
+        "css": "var(--focus-scale-button)",
+        "use": "buttons: the fill grows, the text does not"
+      },
+      "focus.scale.row": {
+        "value": 1.02,
+        "css": "var(--focus-scale-row)",
+        "use": "playback panel rows, release rows"
+      }
+    }
+  }
+}

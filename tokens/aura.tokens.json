@@ -1,0 +1,231 @@
+{
+  "name": "AURA",
+  "version": "2026-11-25.1",
+  "note": "The single source of the AURA look (Tron), shared by AURA.p, Glowcast and Streamer. Every leaf is { value, use }; 'derived' marks a value no app ships yet. Run `node build/build.mjs` after any change and bump `version`. Sizes in `type` and `space` are TV-canvas pixels (1920 x 1080 canvas, 1 = 1/1080 of screen height); `touchType` is in layout units (1px phone, 1.25px tablet); `typeRoles` are px (pt on iOS) for the phone app. Colors are oklch(L% C H [/ A%]) only: the native token generators parse exactly that form.",
+  "defaultTheme": "tron-dark",
+
+  "themes": {
+    "tron-dark": {
+      "use": "The default and the canonical AURA look: cyan glow on a near-black void. The only theme Glowcast and Streamer ship.",
+      "color": {
+        "bg":             { "value": "oklch(6% 0.015 230)",        "use": "the void: every screen's background" },
+        "panel":          { "value": "oklch(12% 0.022 225)",       "use": "menus, tiles, dialogs, cards" },
+        "row":            { "value": "oklch(13% 0.025 222)",       "use": "list and channel rows" },
+        "cell":           { "value": "oklch(17% 0.03 220)",        "use": "listings, poster placeholders" },
+        "cellNow":        { "value": "oklch(23% 0.05 212)",        "use": "listings on now, a focused list row" },
+        "overlay":        { "value": "oklch(6% 0.015 230 / 96%)",  "use": "modal backdrop" },
+        "line":           { "value": "oklch(75% 0.18 198 / 22%)",  "use": "panel edges and dividers" },
+        "lineStrong":     { "value": "oklch(75% 0.18 198 / 45%)",  "use": "stronger dividers, input borders" },
+        "lineHover":      { "value": "oklch(75% 0.18 198 / 85%)",  "use": "border of a pressed or hovered control" },
+        "progressBuffer": { "value": "oklch(75% 0.18 198 / 14%)",  "use": "buffered part of a progress line" },
+        "text":           { "value": "oklch(90% 0.03 210)",        "use": "main text" },
+        "soft":           { "value": "oklch(80% 0.035 210)",       "use": "body text on the void" },
+        "muted":          { "value": "oklch(66% 0.04 210)",        "use": "readouts, secondary labels" },
+        "mutedOnCell":    { "value": "oklch(72% 0.04 210)",        "use": "secondary text on listings" },
+        "ghost":          { "value": "oklch(28% 0.03 220)",        "use": "decoration only: disabled glyphs, grid lines. Never text that must be read" },
+        "ink":            { "value": "oklch(6% 0.015 230)",        "use": "text on a focus, live or danger fill" },
+        "focus":          { "value": "oklch(75% 0.18 198)",        "use": "focus, selection, things you can press. Never decoration" },
+        "focusDim":       { "value": "oklch(75% 0.18 198 / 35%)",  "use": "hover affordance, a light wash of focus" },
+        "live":           { "value": "oklch(72% 0.19 54)",         "use": "the now line, live marks, an active thumbs-up, Tron Light's second accent" },
+        "ok":             { "value": "oklch(80% 0.16 165)",        "use": "success, healthy" },
+        "warn":           { "value": "oklch(86% 0.15 95)",         "use": "last day, warnings" },
+        "danger":         { "value": "oklch(60% 0.22 330)",        "use": "errors and an active thumbs-down only (Arcade Magenta)" },
+        "info":           { "value": "oklch(75% 0.18 198)",        "use": "info banners" }
+      },
+      "glow": {
+        "glow":         { "value": "0 0 12px oklch(75% 0.18 198 / 58%), 0 0 32px oklch(75% 0.18 198 / 24%)", "use": "the focused item" },
+        "glowHover":    { "value": "0 0 16px oklch(75% 0.18 198 / 75%), 0 0 40px oklch(75% 0.18 198 / 32%)", "use": "the strong glow: a pressed primary control (touch), a hovered one (pointer)" },
+        "glowDim":      { "value": "0 0 8px oklch(75% 0.18 198 / 30%), 0 0 20px oklch(75% 0.18 198 / 14%)",  "use": "menus, dialogs, tooltips" },
+        "glowArt":      { "value": "0 0 8px oklch(75% 0.18 198 / 46%), 0 0 22px oklch(75% 0.18 198 / 18%)",  "use": "hero artwork at rest" },
+        "glowArtPulse": { "value": "0 0 12px oklch(75% 0.18 198 / 64%), 0 0 30px oklch(75% 0.18 198 / 26%)", "use": "hero artwork at the peak of its slow pulse" },
+        "glowDanger":   { "value": "0 0 8px oklch(60% 0.22 330 / 40%), 0 0 24px oklch(60% 0.22 330 / 15%)",  "use": "error banner" },
+        "glowOk":       { "value": "0 0 8px oklch(80% 0.16 165 / 40%), 0 0 24px oklch(80% 0.16 165 / 15%)",  "use": "success banner" },
+        "glowInfo":     { "value": "0 0 8px oklch(75% 0.18 198 / 40%), 0 0 24px oklch(75% 0.18 198 / 15%)",  "use": "info banner" }
+      },
+      "grid": {
+        "gridLine": { "value": "none", "use": "no visible background grid on Tron Dark" }
+      }
+    },
+
+    "tron-light": {
+      "use": "Tron's lighter register: a deep-blue visible Grid instead of black void, orange as a second accent. AURA.p only today.",
+      "color": {
+        "bg":             { "value": "oklch(17% 0.07 232)",        "use": "the grid: every screen's background" },
+        "panel":          { "value": "oklch(13% 0.055 234)",       "use": "menus, tiles, dialogs, cards (darker than the grid on purpose)" },
+        "row":            { "value": "oklch(20% 0.07 232)",        "use": "list rows", "derived": true },
+        "cell":           { "value": "oklch(23% 0.075 228)",       "use": "listings, poster placeholders", "derived": true },
+        "cellNow":        { "value": "oklch(28% 0.09 215)",        "use": "listings on now, a focused list row", "derived": true },
+        "overlay":        { "value": "oklch(17% 0.07 232 / 96%)",  "use": "modal backdrop" },
+        "line":           { "value": "oklch(80% 0.17 213 / 18%)",  "use": "panel edges and dividers" },
+        "lineStrong":     { "value": "oklch(80% 0.17 213 / 45%)",  "use": "stronger dividers, input borders" },
+        "lineHover":      { "value": "oklch(80% 0.17 213 / 88%)",  "use": "border of a hovered control" },
+        "progressBuffer": { "value": "oklch(80% 0.17 213 / 16%)",  "use": "buffered part of a progress line" },
+        "text":           { "value": "oklch(91% 0.05 213)",        "use": "main text" },
+        "soft":           { "value": "oklch(82% 0.06 214)",        "use": "body text", "derived": true },
+        "muted":          { "value": "oklch(60% 0.07 218)",        "use": "readouts, secondary labels" },
+        "mutedOnCell":    { "value": "oklch(66% 0.07 218)",        "use": "secondary text on listings", "derived": true },
+        "ghost":          { "value": "oklch(32% 0.06 228)",        "use": "decoration only" },
+        "ink":            { "value": "oklch(17% 0.07 232)",       "use": "text on a focus, live or danger fill" },
+        "focus":          { "value": "oklch(80% 0.17 213)",        "use": "focus, selection, things you can press" },
+        "focusDim":       { "value": "oklch(80% 0.17 213 / 40%)",  "use": "hover affordance" },
+        "live":           { "value": "oklch(72% 0.19 54)",         "use": "the now line, live marks, the orange second accent" },
+        "ok":             { "value": "oklch(68% 0.15 155)",        "use": "success" },
+        "warn":           { "value": "oklch(86% 0.15 95)",         "use": "warnings", "derived": true },
+        "danger":         { "value": "oklch(66% 0.21 318)",        "use": "errors only (AURA.p ships 55%, 3.46:1 on the grid; raised for contrast)" },
+        "info":           { "value": "oklch(80% 0.17 213)",        "use": "info banners" }
+      },
+      "glow": {
+        "glow":         { "value": "0 0 12px oklch(80% 0.17 213 / 55%), 0 0 32px oklch(80% 0.17 213 / 20%)", "use": "the focused item" },
+        "glowHover":    { "value": "0 0 16px oklch(80% 0.17 213 / 70%), 0 0 40px oklch(80% 0.17 213 / 30%)", "use": "the strong glow: a pressed or hovered primary control" },
+        "glowDim":      { "value": "0 0 8px oklch(80% 0.17 213 / 38%), 0 0 18px oklch(80% 0.17 213 / 14%)",  "use": "menus, dialogs, tooltips" },
+        "glowArt":      { "value": "0 0 8px oklch(80% 0.17 213 / 42%), 0 0 18px oklch(80% 0.17 213 / 15%)",  "use": "hero artwork at rest" },
+        "glowArtPulse": { "value": "0 0 10px oklch(80% 0.17 213 / 58%), 0 0 22px oklch(80% 0.17 213 / 22%)", "use": "hero artwork at the peak of its pulse" },
+        "glowDanger":   { "value": "0 0 12px oklch(66% 0.21 318 / 50%), 0 0 32px oklch(66% 0.21 318 / 18%)", "use": "error banner" },
+        "glowOk":       { "value": "0 0 12px oklch(68% 0.15 155 / 45%), 0 0 32px oklch(68% 0.15 155 / 16%)", "use": "success banner" },
+        "glowInfo":     { "value": "0 0 12px oklch(80% 0.17 213 / 45%), 0 0 32px oklch(80% 0.17 213 / 16%)", "use": "info banner" }
+      },
+      "grid": {
+        "gridLine": { "value": "oklch(28% 0.09 195 / 35%)", "use": "1px line of the visible background Grid, every gridSize" }
+      }
+    }
+  },
+
+  "font": {
+    "display": { "value": "\"Rajdhani\",\"Arial Narrow\",sans-serif",        "use": "everything that reads: titles, labels, buttons, running text" },
+    "mono":    { "value": "\"Share Tech Mono\",ui-monospace,Menlo,monospace", "use": "times, numbers, readouts, technical details" }
+  },
+
+  "typeRoles": {
+    "display":  { "value": "300 36px/1.1 display 0.5em",   "use": "phone: logo, login title" },
+    "headline": { "value": "600 16px/1.25 display 0.08em", "use": "phone: track and section titles" },
+    "body":     { "value": "500 14px/1.45 display 0",      "use": "phone: running text" },
+    "label":    { "value": "600 12px/1 display 0.18em",    "use": "phone: toggle and field labels; always upper case" },
+    "button":   { "value": "600 12px/1 display 0.15em",    "use": "phone: button labels; always upper case" },
+    "tab":      { "value": "600 10px/1 display 0.12em",    "use": "phone: tab bar labels; always upper case" },
+    "mono":     { "value": "400 12px/1.4 mono 0.04em",     "use": "phone: track artist, banners, readouts (times are 10px)" }
+  },
+
+  "type": {
+    "t1":  { "value": "13px",  "use": "TV type step 1 of 21: control-bar captions" },
+    "t2":  { "value": "15px",  "use": "TV type step 2: badges, logo chips, tiny captions" },
+    "t3":  { "value": "17px",  "use": "TV type step 3: listing details (mono)" },
+    "t4":  { "value": "19px",  "use": "TV type step 4: small labels, hints" },
+    "t5":  { "value": "20px",  "use": "TV type step 5: readouts, chips, meta lines" },
+    "t6":  { "value": "23px",  "use": "TV type step 6: .label" },
+    "t7":  { "value": "25px",  "use": "TV type step 7: the base size; listing titles, buttons, tabs" },
+    "t8":  { "value": "28px",  "use": "TV type step 8: row headings" },
+    "t9":  { "value": "31px",  "use": "TV type step 9: cover body text" },
+    "t10": { "value": "35px",  "use": "TV type step 10: shelf headings" },
+    "t11": { "value": "38px",  "use": "TV type step 11: tile values" },
+    "t12": { "value": "46px",  "use": "TV type step 12: subtitles, app name" },
+    "t13": { "value": "56px",  "use": "TV type step 13: detail titles" },
+    "t14": { "value": "61px",  "use": "TV type step 14: banner title" },
+    "t15": { "value": "68px",  "use": "TV type step 15: page titles" },
+    "t16": { "value": "77px",  "use": "TV type step 16: info title" },
+    "t17": { "value": "84px",  "use": "TV type step 17: cover headline" },
+    "t18": { "value": "96px",  "use": "TV type step 18: channel digits" },
+    "t19": { "value": "115px", "use": "TV type step 19: marquee wordmark" },
+    "t20": { "value": "130px", "use": "TV type step 20: feature presentation" },
+    "t21": { "value": "230px", "use": "TV type step 21: channel bumper number" }
+  },
+
+  "touchType": {
+    "tt1":  { "value": "9",  "use": "phone/tablet type step 1, in layout units" },
+    "tt2":  { "value": "10", "use": "phone/tablet type step 2" },
+    "tt3":  { "value": "11", "use": "phone/tablet type step 3" },
+    "tt4":  { "value": "12", "use": "phone/tablet type step 4" },
+    "tt5":  { "value": "13", "use": "phone/tablet type step 5" },
+    "tt6":  { "value": "14", "use": "phone/tablet type step 6" },
+    "tt7":  { "value": "15", "use": "phone/tablet type step 7" },
+    "tt8":  { "value": "16", "use": "phone/tablet type step 8: the base size" },
+    "tt9":  { "value": "17", "use": "phone/tablet type step 9" },
+    "tt10": { "value": "18", "use": "phone/tablet type step 10" },
+    "tt11": { "value": "19", "use": "phone/tablet type step 11" },
+    "tt12": { "value": "20", "use": "phone/tablet type step 12" },
+    "tt13": { "value": "22", "use": "phone/tablet type step 13: section headings" },
+    "tt14": { "value": "24", "use": "phone/tablet type step 14" },
+    "tt15": { "value": "26", "use": "phone/tablet type step 15" },
+    "tt16": { "value": "28", "use": "phone/tablet type step 16" },
+    "tt17": { "value": "30", "use": "phone/tablet type step 17" },
+    "tt18": { "value": "38", "use": "phone/tablet type step 18" },
+    "tt19": { "value": "44", "use": "phone/tablet type step 19" }
+  },
+
+  "space": {
+    "s1":  { "value": "2px",  "use": "space step 1 of 16: hairline gaps, focus outline offset" },
+    "s2":  { "value": "4px",  "use": "space step 2 (phone 'xs')" },
+    "s3":  { "value": "6px",  "use": "space step 3: chip padding, reduced-motion outline width" },
+    "s4":  { "value": "8px",  "use": "space step 4 (phone 'sm')" },
+    "s5":  { "value": "10px", "use": "space step 5" },
+    "s6":  { "value": "12px", "use": "space step 6" },
+    "s7":  { "value": "14px", "use": "space step 7" },
+    "s8":  { "value": "16px", "use": "space step 8 (phone 'md')" },
+    "s9":  { "value": "19px", "use": "space step 9" },
+    "s10": { "value": "24px", "use": "space step 10 (phone 'lg')" },
+    "s11": { "value": "27px", "use": "space step 11" },
+    "s12": { "value": "31px", "use": "space step 12" },
+    "s13": { "value": "38px", "use": "space step 13" },
+    "s14": { "value": "46px", "use": "space step 14" },
+    "s15": { "value": "58px", "use": "space step 15" },
+    "s16": { "value": "77px", "use": "space step 16" },
+    "sectionGap": { "value": "46px", "use": "between a page's sections, and between parts side by side" },
+    "headingGap": { "value": "12px", "use": "between a heading and what it heads" },
+    "buttonGap":  { "value": "24px", "use": "between buttons side by side: room for a focused one's growth and glow" },
+    "tileGap":    { "value": "24px", "use": "between tiles, across and down: posters, cards" },
+    "chipGap":    { "value": "10px", "use": "between chips and logos, across and down" },
+    "edgeY":      { "value": "60px", "use": "TV screen top and bottom margin (title-safe)" },
+    "edgeX":      { "value": "80px", "use": "TV screen side margins (title-safe)" }
+  },
+
+  "shape": {
+    "radius":      { "value": "0px",  "use": "every corner of every control, panel and frame. Tron is square" },
+    "notchSize":   { "value": "10px", "use": "arm length of the L-shaped corner notches on framed artwork" },
+    "notchCard":   { "value": "8px",  "use": "arm length of the notches on a station card while pressed or its menu is open" },
+    "notchWeight": { "value": "2px",  "use": "stroke of the corner notches" },
+    "gridSize":    { "value": "24px", "use": "cell of the background Grid (where a theme draws one)" },
+    "hairline":    { "value": "1px",  "use": "panel edges, dividers, chip and badge outlines" },
+    "ring":        { "value": "3px",  "use": "focus ring around posters, cards and framed art" }
+  },
+
+  "motion": {
+    "pressMs":     { "value": "80ms",   "use": "press feedback on a control" },
+    "fadeMs":      { "value": "120ms",  "use": "tab pane fade-in" },
+    "focusMs":     { "value": "150ms",  "use": "focus change: color, scale, glow" },
+    "bannerInMs":  { "value": "200ms",  "use": "info banner in" },
+    "scrollMs":    { "value": "200ms",  "use": "guide and list scrolling" },
+    "slideMs":     { "value": "240ms",  "use": "now-playing bar and playback panel sliding in and out" },
+    "bannerOutMs": { "value": "300ms",  "use": "info banner out" },
+    "bannerHoldMs": { "value": "4000ms", "use": "how long a message banner stays before it goes by itself" },
+    "cubeTurnYMs": { "value": "1800ms", "use": "the cube spinner's turn about its vertical axis" },
+    "cubeTurnXMs": { "value": "2700ms", "use": "the cube spinner's turn about its horizontal axis; unequal to Y so it tumbles, never repeats a flat spin" },
+    "loadDelayMs": { "value": "200ms",  "use": "a loading line stays hidden this long, so an answer that comes at once never shows one" },
+    "glideMs":     { "value": "1600ms", "use": "one glide of the lit piece along the loading line" },
+    "sweepMs":     { "value": "2400ms", "use": "one pass of the orange now line across the tuning screen's guide bars" },
+    "pulseMs":     { "value": "4000ms", "use": "one breath of the hero-art glow pulse" }
+  },
+
+  "easing": {
+    "enter":    { "value": "ease-out",    "use": "things arriving or growing" },
+    "exit":     { "value": "ease-in",     "use": "things leaving" },
+    "move":     { "value": "ease-in-out", "use": "lists and rows scrolling to a new place" },
+    "constant": { "value": "linear",      "use": "spinners, sweeps, progress" }
+  },
+
+  "focus": {
+    "scale": {
+      "cell":   { "value": 1.045, "use": "guide cells, library posters" },
+      "card":   { "value": 1.07,  "use": "16:9 cards, poster rows" },
+      "item":   { "value": 1.03,  "use": "channel and list rows" },
+      "button": { "value": 1.05,  "use": "buttons: the fill grows, the text does not" },
+      "row":    { "value": 1.02,  "use": "playback panel rows, release rows" }
+    }
+  },
+
+  "canvas": {
+    "width":           { "value": 1920, "use": "TV layout canvas width, scaled to the screen" },
+    "height":          { "value": 1080, "use": "TV layout canvas height" },
+    "touchUnitPhone":  { "value": 1,    "use": "px per touchType unit on a phone" },
+    "touchUnitTablet": { "value": 1.25, "use": "px per touchType unit on a tablet" },
+    "minTouchTarget":  { "value": 44,   "use": "smallest tap target, px" }
+  }
+}
