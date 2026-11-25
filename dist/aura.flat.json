@@ -834,7 +834,7 @@
         "value": "oklch(66% 0.21 318)",
         "hex": "#c55ee3",
         "css": "var(--danger)",
-        "use": "errors only (AURA.p ships 55%, 3.46:1 on the grid; raised for contrast)"
+        "use": "errors only"
       },
       "color.info": {
         "value": "oklch(80% 0.17 213)",

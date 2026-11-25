@@ -26,7 +26,7 @@ for (const group of ["color", "glow", "grid"]) {
   for (const th of themes) if (Object.keys(T.themes[th][group]).join() !== ref) fail(`themes.${th}.${group}: roles differ from ${T.defaultTheme} (same names, same order)`);
 }
 
-// ---- Color: oklch() to sRGB, the same math as the apps' generators (apple-tv/tokens.py, server tokens.go) ----
+// ---- Color: oklch() to sRGB, the same math as the TV apps' token generators ----
 const OKLCH = /^oklch\(\s*([\d.]+)%\s+([\d.]+)\s+([\d.]+)\s*(?:\/\s*([\d.]+)%)?\s*\)$/;
 function toRGBA(css, where) {
   const m = OKLCH.exec(css.trim());
@@ -144,8 +144,8 @@ out("dist/aura-compat.css", `/* ${header} */
 }
 `);
 
-// design-tokens.json: drop-in for Glowcast and Streamer (internal/server/tokens/design-tokens.json), Tron Dark,
-// in the exact shape their server, Gradle task and apple-tv/tokens.py read. Only the keys they know.
+// design-tokens.json: drop-in token file for Glowcast and Streamer, Tron Dark, in the exact shape their server and
+// TV builds read. Only the keys they know.
 const D = T.themes[T.defaultTheme];
 const pick = (src, keys) => Object.fromEntries(keys.map((k) => [k, { value: src[k].value, use: src[k].use }]));
 const tv = {

@@ -57,7 +57,7 @@
   $("#motiongrid").innerHTML = Object.entries(T.motion).map(([k, v]) =>
     `<button class="mt" style="--d:${v.value};--e:${EASE[k] || "ease-out"}"><em>${parseInt(v.value)}</em><b>${k}</b><span>${esc(v.use)}</span><span class="trk"><i></i></span></button>`).join("");
 
-  // ---- Cube spinner: AURA.p's TronCube (ios/Native/App/Design/TronCube.swift) on a canvas ----
+  // ---- Cube spinner: AURA.p's spinner, drawn on a canvas ----
   // The cube's 12 edges turn about Y (cubeTurnYMs) and X (cubeTurnXMs, from a 0.5 rad tilt) in perspective from 4.5
   // half-sides away; far edges at 22% opacity, near ones full and the near half under the glow.
   const CORNERS = [[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];

@@ -9,7 +9,7 @@ AURA is a folder of files, not a package: an app reads the generated files from 
 | `tokens/aura.tokens.json` | Source of truth | Edit this, nothing else |
 | `dist/aura.css` | Any web view | Every token as a CSS variable; `:root` is Tron Dark, `.theme-tron-light` on `<html>` switches |
 | `dist/aura-compat.css` | Name map | Each app's current variable names (`--guide`, `--accent`, `--text-dim`, `--border-dim` ...) as aliases of AURA's. A web app can load it after `aura.css`; AURA.p reads it as the map for its Swift token names |
-| `dist/design-tokens.json` | Glowcast, Streamer | Drop-in for `internal/server/tokens/design-tokens.json`: same shape and keys their Go server, Gradle `generateTokens` task and `apple-tv/tokens.py` read. Tron Dark |
+| `dist/design-tokens.json` | Glowcast, Streamer | Drop-in for their own `design-tokens.json`: the same shape and keys their server and TV builds read. Tron Dark |
 | `dist/aura.flat.json` | Agents, scripts, native code | Every token per theme, resolved, with sRGB `hex` and its CSS variable name |
 | `dist/aura.tokens.js` | The showcase page | `window.AURA` |
 | `docs/contrast.md` | Review | Contrast table, regenerated each build |
@@ -29,9 +29,9 @@ AURA doesn't ship font files. Web: Google Fonts `Rajdhani:wght@300;400;500;600;7
 
 ## Per app
 
-**Glowcast and Streamer (web, Google TV, Apple TV).** Point the server's embedded token file at `dist/design-tokens.json` (copy it to `internal/server/tokens/design-tokens.json` as part of the build, or embed from the AURA checkout). The server keeps generating `/tokens.css` from it, and both TV builds keep generating `Tokens.kt` / `Tokens.swift`: no code change. Their web CSS keeps its current names (`--guide`, `--display`, `--mono`) because their server generates those from this file.
+**Glowcast and Streamer (web, Google TV, Apple TV).** Replace the token file the server embeds with `dist/design-tokens.json` (copy it in as part of the build, or embed it from the AURA checkout). The server keeps generating `/tokens.css` from it, and both TV builds keep generating `Tokens.kt` / `Tokens.swift`: no code change. Their web CSS keeps its current names (`--guide`, `--display`, `--mono`) because their server generates those from this file.
 
-**AURA.p (native Swift, iPhone and iPad; branch `codex/native-ios`).** It has no CSS. Its tokens are `ios/Native/AURACore/Sources/AURACore/Design/DesignTokens+Themes.swift` (`tronDark`, `tronLight`), kept with `Fixtures/design-tokens-contract.json`, and its views read them by their legacy CSS names (`theme.color("--accent")`). Take the values from `dist/aura.flat.json`; [`dist/aura-compat.css`](../dist/aura-compat.css) is the name map from AURA's names to AURA.p's (`--accent` ← `focus`, `--bg-panel` ← `panel`, `--text-dim` ← `muted`, `--border-dim` ← `line` ...). A small generator, like Glowcast's `apple-tv/tokens.py`, could write `DesignTokens+Themes.swift` from `aura.flat.json` at build time; it doesn't exist yet. AURA.p paints its OKLCH colors in Display P3; the TV apps clip to sRGB (see [reconciliation.md](reconciliation.md)). Bluey isn't part of AURA.
+**AURA.p (native Swift, iPhone and iPad).** It has no CSS: its Swift token file holds the Tron Dark and Tron Light values under their CSS-style names (`--accent`, `--bg-panel` ...). Take the values from `dist/aura.flat.json`; [`dist/aura-compat.css`](../dist/aura-compat.css) is the name map from AURA's names to AURA.p's (`--accent` ← `focus`, `--bg-panel` ← `panel`, `--text-dim` ← `muted`, `--border-dim` ← `line` ...). AURA.p paints OKLCH colors in Display P3, so its cyan is a little more vivid than the TV apps', which clip to sRGB.
 
 ## Changing a token
 

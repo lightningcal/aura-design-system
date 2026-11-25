@@ -47,7 +47,7 @@ AURA is one system for three products:
 
 | App | What it is | Platforms | Themes |
 |---|---|---|---|
-| **AURA.p** | Pandora client | Native Swift for iPhone and iPad (branch `codex/native-ios`; Electron and Capacitor retired) | Tron Dark, Tron Light |
+| **AURA.p** | Pandora client | Native Swift for iPhone and iPad | Tron Dark, Tron Light |
 | **Glowcast** | Live TV channels from a Plex library | Web (TV canvas + touch), Google TV, Apple TV | Tron Dark |
 | **Streamer** | On-demand catalogue player | Web (TV canvas), Google TV, Apple TV | Tron Dark |
 

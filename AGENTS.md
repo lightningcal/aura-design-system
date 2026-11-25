@@ -8,7 +8,6 @@ AURA is the Tron design system shared by **AURA.p**, **Glowcast** and **Streamer
 2. **[dist/aura.flat.json](dist/aura.flat.json)**: every token, resolved per theme, with `use`, sRGB `hex` and its CSS variable. Easiest file for looking up a value.
 3. **[docs/components.md](docs/components.md)**: how each building block is made from tokens.
 4. **[docs/consuming.md](docs/consuming.md)**: which file each platform loads and how to change a token.
-5. **[docs/reconciliation.md](docs/reconciliation.md)**: what each app still has to change to match AURA.
 
 ## Rules for any agent working on an AURA app
 
@@ -23,5 +22,6 @@ AURA is the Tron design system shared by **AURA.p**, **Glowcast** and **Streamer
 - **Edit only `tokens/aura.tokens.json`** (and the docs). Never hand-edit `dist/` or `docs/contrast.md`.
 - Every token is `{ "value", "use" }`. Colors are `oklch(L% C H)` or `oklch(L% C H / A%)`, the only form the apps' native generators parse. Both themes must have the same roles in the same order.
 - After a change: bump `version`, run `node build/build.mjs`, and commit the tokens and `dist/` together. The build fails on bad tokens or contrast below 4.5:1.
-- When a value changes, update DESIGN.md if it's quoted there, and add the change to docs/reconciliation.md if any app needs to act on it.
+- When a value changes, update DESIGN.md if it's quoted there.
+- Keep this repo about the system, not the apps' code: no app repo paths or branch names. The repo is public.
 - `index.html` is the showcase and reads `dist/aura.css` + `dist/aura.tokens.js`. Open it after a change to look at the result.

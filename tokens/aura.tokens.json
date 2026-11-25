@@ -71,7 +71,7 @@
         "live":           { "value": "oklch(72% 0.19 54)",         "use": "the now line, live marks, the orange second accent" },
         "ok":             { "value": "oklch(68% 0.15 155)",        "use": "success" },
         "warn":           { "value": "oklch(86% 0.15 95)",         "use": "warnings", "derived": true },
-        "danger":         { "value": "oklch(66% 0.21 318)",        "use": "errors only (AURA.p ships 55%, 3.46:1 on the grid; raised for contrast)" },
+        "danger":         { "value": "oklch(66% 0.21 318)",        "use": "errors only" },
         "info":           { "value": "oklch(80% 0.17 213)",        "use": "info banners" }
       },
       "glow": {

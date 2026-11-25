@@ -15,7 +15,6 @@ tokens/aura.tokens.json   the single source of every value  ← edit this
 DESIGN.md                 art direction: principles, color, type, shape, motion, do & don't
 docs/components.md        anatomy of each building block
 docs/consuming.md         how each app and platform loads the tokens
-docs/reconciliation.md    what was merged from each app, and what each app must change
 docs/contrast.md          generated contrast report
 dist/                     generated outputs (CSS, TV drop-in JSON, flat JSON)
 build/build.mjs           the generator and its checks (Node 18+, no dependencies)
@@ -36,7 +35,7 @@ AGENTS.md                 guide for coding agents
 <link rel="stylesheet" href="../aura-design-system/dist/aura.css">
 ```
 
-TV apps take `dist/design-tokens.json` in place of their own `internal/server/tokens/design-tokens.json`; see [docs/consuming.md](docs/consuming.md).
+TV apps take `dist/design-tokens.json` in place of their own token file; see [docs/consuming.md](docs/consuming.md).
 
 ## Change it
 

@@ -1,6 +1,6 @@
 # Components
 
-The building blocks every AURA app is made of, described in tokens. Web class names in `code` are Glowcast's and Streamer's (`web/app/css/aura.css`, `streamer.css`); AURA.p names are its SwiftUI views on `codex/native-ios` (`ios/Native/App/Design/`). TV sizes are canvas px tokens; AURA.p uses the phone `typeRoles` and `s2/s4/s8/s10`. The live versions are in the showcase ([index.html](../index.html)).
+The building blocks every AURA app is made of, described in tokens. Class names in `code` are the web classes Glowcast and Streamer use, and the showcase too. TV sizes are canvas px tokens; AURA.p uses the phone `typeRoles` and `s2/s4/s8/s10`. The live versions are in the showcase ([index.html](../index.html)).
 
 ## Focus and press (the main state)
 
@@ -9,7 +9,7 @@ The building blocks every AURA app is made of, described in tokens. Web class na
 - **Touch (AURA.p):** the pressed state carries the highlight: `focus` border + `glow` (`glowHover` on a primary button). No hover states, no tooltips; a control's hint is its VoiceOver hint.
 - **Reduced motion:** no scale, no glow; `outline: var(--s3) solid var(--text); outline-offset: var(--s1)`.
 
-## Button `.btn` (AURA.p primary / secondary buttons)
+## Button `.btn`
 
 - TV: display `t7`, 600, 0.1em, upper case, padding `s6` × `s12`; rest fill `text` at 11%. **The fill grows, the text doesn't:** the fill is a `::before` layer scaled by `focus.scale.button`, so words never jump.
 - Phone: `button` role (12px, 0.15em, upper case). Primary: `focus` fill, `ink` text, `glow`; pressed `glowHover`. Secondary: transparent, 1px `line`; pressed border and text `focus` + `glow`. Tertiary (Tron Light): `live` border and text.
@@ -67,14 +67,14 @@ The building blocks every AURA app is made of, described in tokens. Web class na
 ## Panel, tile, dialog
 
 - `panel` fill, 1px inset `line`, `glowDim` around floating ones (menus, dialogs).
-- Dialog (AURA.p `EQPresetDialog`, `ConfirmDialogView`): full-window `overlay` backdrop, centred panel on `bg`, title in display label styling, actions right-aligned: secondary then primary. One modal shell; don't invent a second. A leading-edge swipe cancels it.
+- Dialog: full-window `overlay` backdrop, centred panel on `bg`, title in display label styling, actions right-aligned: secondary then primary. One modal shell; don't invent a second. A leading-edge swipe cancels it.
 - Info banner over video (TV): void at 90% so the picture shows faintly through, 1px `line`, a faint 23px cyan halo.
 
-## Menu (AURA.p `AuraMenuLayer`)
+## Menu (AURA.p)
 
 - Floating `panel`, 1px `line`, `glowDim`, at the press point or below its trigger, 8pt inside the window. Items 39pt rows, body 14px **sentence case**; a destructive item carries an 18px circle-× icon. No dividers, no open animation. A tap outside closes it.
 
-## Message banner (AURA.p `BannerCenter`)
+## Message banner (AURA.p)
 
 - One at a time, full width under the tab bar (at the top of the login screen); never shifts content. Mono 12px upper case, 0.05em.
 - Error: `danger` fill, `ink` text, `glowDanger`. Success: `ok` + `glowOk`. Info: `info` + `glowInfo`. Goes by itself after `bannerHoldMs` (4s; 0 keeps it). Announced to VoiceOver.
@@ -84,12 +84,12 @@ The building blocks every AURA app is made of, described in tokens. Web class na
 - Square, void fill, 1px `lineStrong`; focus: `focus` border (or 2–3px inset ring) + `glow`; caret `focus`.
 - Placeholder upper case in `muted` (not `ghost`: placeholders must be readable).
 
-## Dropdown (AURA.p `AuraSelect`)
+## Dropdown (AURA.p)
 
 - `panel` fill, 1px `line`, square; label in body type 13px (16 in an option list), **sentence case**; chevron triangle in `focus`. A picker with long options opens a dialog instead.
 
 ## Loading
 
-- **Cube spinner (AURA.p `TronCubeSpinner`):** the 12 edges of a wireframe cube in `focus`, 1.25px lines (1px under 28px), turning about Y (`cubeTurnYMs`) and X (`cubeTurnXMs`, from a 0.5 rad tilt) in perspective from 4.5 half-sides away. Far edges at 22% opacity rising to full for near ones; the near half drawn again under `glow`. 40px by default. Holds still with reduced motion. Its loading text: mono 11px, 0.18em, upper case, `muted`.
-- **Loading line (Streamer `.sweep`):** 240px × 3px track of `text` at 15%; a `focus` piece 35% long glides across every `glideMs`, `ease-in-out`; fades in after `loadDelayMs` so a quick answer never shows it; sits under the word naming the wait ("Loading…", "Searching for releases…"). With reduced motion the piece stands still.
-- **Tuning bars (Glowcast `.tune-bars`):** three rows of listing bars, centred, with the words written in them; the `live` now line sweeps across every `sweepMs`; each bar lights `focus` (words `ink`) as it passes. With reduced motion one bar stays lit and the line stands still.
+- **Cube spinner (AURA.p):** the 12 edges of a wireframe cube in `focus`, 1.25px lines (1px under 28px), turning about Y (`cubeTurnYMs`) and X (`cubeTurnXMs`, from a 0.5 rad tilt) in perspective from 4.5 half-sides away. Far edges at 22% opacity rising to full for near ones; the near half drawn again under `glow`. 40px by default. Holds still with reduced motion. Its loading text: mono 11px, 0.18em, upper case, `muted`.
+- **Loading line (Streamer):** 240px × 3px track of `text` at 15%; a `focus` piece 35% long glides across every `glideMs`, `ease-in-out`; fades in after `loadDelayMs` so a quick answer never shows it; sits under the word naming the wait ("Loading…", "Searching for releases…"). With reduced motion the piece stands still.
+- **Tuning bars (Glowcast):** three rows of listing bars, centred, with the words written in them; the `live` now line sweeps across every `sweepMs`; each bar lights `focus` (words `ink`) as it passes. With reduced motion one bar stays lit and the line stands still.
