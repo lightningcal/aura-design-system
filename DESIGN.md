@@ -117,6 +117,7 @@ Short and plain: fades and slides of 80–300ms, no bounce, no spring.
 | `focusMs` | 150 | Focus change: fill, scale, glow (`ease-out`) |
 | `bannerInMs` / `bannerOutMs` | 200 / 300 | Banner in (`ease-out`) and out (`ease-in`); a message banner holds `bannerHoldMs` 4000 |
 | `slideMs` | 240 | Now-playing bar and playback panel |
+| `screenFadeMs` | 250 | One screen fades into the next (`ease-in-out`) as it opens or is come back to |
 | `scrollMs` | 200 | Lists scroll to a new place (`ease-in-out`) |
 | `pulseMs` | 4000 | Hero art glow breathing |
 

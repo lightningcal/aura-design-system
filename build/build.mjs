@@ -154,7 +154,7 @@ const tv = {
   color: { ink: D.color.ink, guide: D.color.bg, ...pick(D.color, ["panel", "row", "cell", "cellNow", "line", "lineStrong", "text", "soft", "muted", "mutedOnCell", "focus", "live", "ok", "warn", "danger"]) },
   font: pick(T.font, ["display", "mono"]),
   glow: pick(D.glow, ["glow", "glowDim"]),
-  motion: pick(T.motion, ["focusMs", "bannerInMs", "bannerOutMs", "slideMs", "scrollMs"]),
+  motion: pick(T.motion, ["focusMs", "bannerInMs", "bannerOutMs", "slideMs", "scrollMs", "screenFadeMs"]),
   type: T.type,
   space: T.space,
   touchType: T.touchType,

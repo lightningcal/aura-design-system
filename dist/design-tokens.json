@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25.1",
-  "note": "AURA Tron Dark for TV apps, generated from the AURA design system (aura-design-system/tokens/aura.tokens.json 2026-11-25.1). Don't edit here; change AURA and rebuild. Type and space are in TV-canvas pixels: 1920 x 1080, so 1 is 1/1080 of the screen's height.",
+  "version": "2026-11-26.1",
+  "note": "AURA Tron Dark for TV apps, generated from the AURA design system (aura-design-system/tokens/aura.tokens.json 2026-11-26.1). Don't edit here; change AURA and rebuild. Type and space are in TV-canvas pixels: 1920 x 1080, so 1 is 1/1080 of the screen's height.",
   "color": {
     "ink": {
       "value": "oklch(6% 0.015 230)",
@@ -111,6 +111,10 @@
     "scrollMs": {
       "value": "200ms",
       "use": "guide and list scrolling"
+    },
+    "screenFadeMs": {
+      "value": "250ms",
+      "use": "one screen fading into the next as it opens or is come back to"
     }
   },
   "type": {

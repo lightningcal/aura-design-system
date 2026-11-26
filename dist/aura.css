@@ -1,4 +1,4 @@
-/* Generated from tokens/aura.tokens.json 2026-11-25.1 by build/build.mjs. Don't edit; change the tokens file. */
+/* Generated from tokens/aura.tokens.json 2026-11-26.1 by build/build.mjs. Don't edit; change the tokens file. */
 /* Themes: :root is tron-dark; add .theme-tron-light to <html> for Tron Light. */
 :root,
 .theme-tron-dark {
@@ -164,6 +164,7 @@
   --banner-in-ms: 200ms;
   --scroll-ms: 200ms;
   --slide-ms: 240ms;
+  --screen-fade-ms: 250ms;
   --banner-out-ms: 300ms;
   --banner-hold-ms: 4000ms;
   --cube-turn-y-ms: 1800ms;

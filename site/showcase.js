@@ -53,7 +53,7 @@
   $("#gaps").innerHTML = gaps.map(([k, v]) => bar(k, v, 80).replace("</div>", `<small>${esc(v.use)}</small></div>`)).join("");
 
   // ---- Motion ----
-  const EASE = { pressMs: "ease", fadeMs: "ease-out", focusMs: "ease-out", bannerInMs: "ease-out", scrollMs: "ease-in-out", slideMs: "ease-out", bannerOutMs: "ease-in", cubeTurnYMs: "linear", cubeTurnXMs: "linear", loadDelayMs: "linear", glideMs: "ease-in-out", sweepMs: "linear", bannerHoldMs: "linear", pulseMs: "ease-in-out" };
+  const EASE = { pressMs: "ease", fadeMs: "ease-out", focusMs: "ease-out", bannerInMs: "ease-out", scrollMs: "ease-in-out", slideMs: "ease-out", screenFadeMs: "ease-in-out", bannerOutMs: "ease-in", cubeTurnYMs: "linear", cubeTurnXMs: "linear", loadDelayMs: "linear", glideMs: "ease-in-out", sweepMs: "linear", bannerHoldMs: "linear", pulseMs: "ease-in-out" };
   $("#motiongrid").innerHTML = Object.entries(T.motion).map(([k, v]) =>
     `<button class="mt" style="--d:${v.value};--e:${EASE[k] || "ease-out"}"><em>${parseInt(v.value)}</em><b>${k}</b><span>${esc(v.use)}</span><span class="trk"><i></i></span></button>`).join("");
 

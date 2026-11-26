@@ -1,6 +1,6 @@
 {
   "name": "AURA",
-  "version": "2026-11-25.1",
+  "version": "2026-11-26.1",
   "note": "The single source of the AURA look (Tron), shared by AURA.p, Glowcast and Streamer. Every leaf is { value, use }; 'derived' marks a value no app ships yet. Run `node build/build.mjs` after any change and bump `version`. Sizes in `type` and `space` are TV-canvas pixels (1920 x 1080 canvas, 1 = 1/1080 of screen height); `touchType` is in layout units (1px phone, 1.25px tablet); `typeRoles` are px (pt on iOS) for the phone app. Colors are oklch(L% C H [/ A%]) only: the native token generators parse exactly that form.",
   "defaultTheme": "tron-dark",
 
@@ -194,6 +194,7 @@
     "bannerInMs":  { "value": "200ms",  "use": "info banner in" },
     "scrollMs":    { "value": "200ms",  "use": "guide and list scrolling" },
     "slideMs":     { "value": "240ms",  "use": "now-playing bar and playback panel sliding in and out" },
+    "screenFadeMs": { "value": "250ms", "use": "one screen fading into the next as it opens or is come back to" },
     "bannerOutMs": { "value": "300ms",  "use": "info banner out" },
     "bannerHoldMs": { "value": "4000ms", "use": "how long a message banner stays before it goes by itself" },
     "cubeTurnYMs": { "value": "1800ms", "use": "the cube spinner's turn about its vertical axis" },

@@ -1,6 +1,6 @@
 # Contrast
 
-Generated from tokens/aura.tokens.json 2026-11-25.1 by build/build.mjs. Don't edit; change the tokens file.
+Generated from tokens/aura.tokens.json 2026-11-26.1 by build/build.mjs. Don't edit; change the tokens file.
 
 WCAG 2 contrast of each text role on the surface it sits on. Translucent colors are laid over their surface first. The build fails if a pair drops below its floor.
 

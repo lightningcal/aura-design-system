@@ -1,6 +1,6 @@
 {
-  "version": "2026-11-25.1",
-  "header": "Generated from tokens/aura.tokens.json 2026-11-25.1 by build/build.mjs. Don't edit; change the tokens file.",
+  "version": "2026-11-26.1",
+  "header": "Generated from tokens/aura.tokens.json 2026-11-26.1 by build/build.mjs. Don't edit; change the tokens file.",
   "themes": {
     "tron-dark": {
       "color.bg": {
@@ -610,6 +610,11 @@
         "value": "240ms",
         "css": "var(--slide-ms)",
         "use": "now-playing bar and playback panel sliding in and out"
+      },
+      "motion.screenFadeMs": {
+        "value": "250ms",
+        "css": "var(--screen-fade-ms)",
+        "use": "one screen fading into the next as it opens or is come back to"
       },
       "motion.bannerOutMs": {
         "value": "300ms",
@@ -1311,6 +1316,11 @@
         "value": "240ms",
         "css": "var(--slide-ms)",
         "use": "now-playing bar and playback panel sliding in and out"
+      },
+      "motion.screenFadeMs": {
+        "value": "250ms",
+        "css": "var(--screen-fade-ms)",
+        "use": "one screen fading into the next as it opens or is come back to"
       },
       "motion.bannerOutMs": {
         "value": "300ms",
